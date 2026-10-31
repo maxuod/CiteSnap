@@ -47,7 +47,8 @@
     "package-desktop": "node scripts/package-desktop.mjs",
     "verify-desktop": "node scripts/verify-desktop.mjs",
     "verify-package": "node scripts/verify-package.mjs",
-    "release-check": "node scripts/check-release.mjs"
+    "release-check": "node scripts/check-release.mjs",
+    "verify-engine": "node scripts/verify-collection-engine.mjs"
   },
   "dependencies": {
     "playwright-core": "1.63.0",

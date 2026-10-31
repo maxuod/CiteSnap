@@ -30,7 +30,7 @@ Original question text/order, answer text, citations, bounded artifacts, timesta
 
 ## Development
 
-Requires Node.js 22.19+ for development only. Install locked dependencies, run npm test, npm run prepare-browser and npm run desktop. Native isolated synthetic acceptance: node scripts/verify-desktop.mjs. Packaging: npm run package-desktop, with a configured signing identity; an existing private owner build config may be supplied using --local-signing-config and an absolute path. Never commit signing secrets.
+Requires Node.js 22.19+ for development only. Install locked dependencies, run npm test, npm run prepare-browser and npm run desktop. Native isolated synthetic acceptance: node scripts/verify-desktop.mjs. The packaged engine can be checked against fully intercepted synthetic pages with npm run verify-engine; this does not contact real providers or certify real account access. Packaging: npm run package-desktop, with a configured signing identity; an existing private owner build config may be supplied using --local-signing-config and an absolute path. Never commit signing secrets.
 
 Packaging uses a strict source/dependency allowlist. The library retains compatibility exports and separately records historical 0.1.0 versus current 0.2.0 hashes in source-provenance.json. CLI live guest collection is disabled in 0.2; offline verification remains. Customer collection goes through the desktop's frozen-question, own-account and host-network gates.
 

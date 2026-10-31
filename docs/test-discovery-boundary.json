@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "config": "vitest.config.mjs",
+  "configSha256": "493703aaaeba861ccd62a16088695e5868c7eec748faf280798f70b272afed61",
+  "files": [
+    "tests/browser-environment.test.ts",
+    "tests/browser-extract.test.ts",
+    "tests/chrome-concurrency.test.ts",
+    "tests/duckduckgo-collector.test.ts",
+    "tests/local-workspace.test.ts",
+    "tests/new-platform-collector.test.ts",
+    "tests/package-files.test.ts",
+    "tests/platform-profiles.test.ts",
+    "tests/protocol.test.ts"
+  ],
+  "fileCount": 9,
+  "listedRunnableCases": 216,
+  "outsideProjectFiles": 0,
+  "applicationsShortcutPresent": true,
+  "failedPreFixRunPreservedPrivately": true,
+  "failedPreFixRunSha256": "b202d6f29c9e0a06ef831dc7ba2b2e35581f847bf28abb4247f26fc8821e307f",
+  "rawDiscoverySha256": "e2e549c7e77cba3e05ac811065b7ab80db514acfd6b1385d4b6f8566f5445899",
+  "sourceSuitePassed": 216,
+  "existingOptInSkipped": 1,
+  "passedSourceRunSha256": "e66f36f1459194b04cc05ea9c7b40e5808aa4ccbc13bfc88317f2b77788cd249",
+  "fullRunLogsRetainedPrivately": true
+}
