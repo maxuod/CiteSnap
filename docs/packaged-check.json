@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "manifestEntries": 642,
+  "sourceFilesMatch": 24,
+  "packagedElectronLaunch": false,
+  "bundledBrowserLaunches": 2,
+  "localhostPersistence": true,
+  "browserHostDefaults": [
+    {
+      "timezone": "America/Halifax",
+      "locale": "en-US"
+    },
+    {
+      "timezone": "America/Halifax",
+      "locale": "en-US"
+    }
+  ],
+  "minimalEnvironmentKeys": [
+    "HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+  ],
+  "syntheticData": true,
+  "realProviderRequests": 0,
+  "cleanMachineAcceptance": false,
+  "notarized": false
+}

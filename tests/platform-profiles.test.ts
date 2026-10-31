@@ -20,7 +20,7 @@ afterEach(async () => {
   vi.unstubAllEnvs();
 });
 
-function fixture() {
+function fixture(hostEnvironment=false) {
   const root = mkdtempSync(join(tmpdir(), 'getaudit-profile-test-')); roots.push(root);
   const data = new Map<string, { cookie: string; local: string }>();
   const contexts: any[] = [];
@@ -42,11 +42,18 @@ function fixture() {
     context.page = { closed: false, close: async () => { context.page.closed = true; } };
     contexts.push(context); return context;
   }) };
-  const fresh = () => { const manager = createPlatformProfiles({ root, chromium, executablePath }); managers.push(manager); return manager; };
+  const fresh = () => { const manager = createPlatformProfiles({ root, chromium, executablePath, hostEnvironment }); managers.push(manager); return manager; };
   return { root, chromium, contexts, fresh, manager: fresh() };
 }
 
 describe('dedicated persistent platform login profiles', () => {
+  it('keeps dedicated signed-in host-mode contexts free of locale, timezone, geolocation and proxy overrides',async()=>{
+    const f=fixture(true);await f.manager.open('gemini',config,'visible');
+    const options=f.chromium.launchPersistentContext.mock.calls[0][1];
+    for(const key of ['locale','timezoneId','geolocation','proxy'])expect(options).not.toHaveProperty(key);
+    expect(options.permissions).toEqual([]);expect(Object.getPrototypeOf(options.env)).toBeNull();
+  });
+
   it('keeps persistent visible, silent, restored and reopened browser environments credential-free', async () => {
     const f=fixture();
     const allowed={HOME:'/synthetic/browser-home',PATH:'/synthetic/browser-bin',TMPDIR:'/tmp',LANG:'en_CA.UTF-8'};
@@ -236,7 +243,7 @@ it.runIf(process.env.GETAUDIT_PROFILE_BROWSER_TEST === '1' && existsSync(executa
   const address = server.address(); if (!address || typeof address === 'string') throw new Error('Synthetic server unavailable');
   const origin = `http://127.0.0.1:${address.port}`;
   const { chromium } = require('playwright-core');
-  const create = () => { const manager = createPlatformProfiles({ root, chromium, executablePath }); managers.push(manager); return manager; };
+  const create = () => { const manager = createPlatformProfiles({ root, chromium, executablePath, hostEnvironment }); managers.push(manager); return manager; };
   let manager = create();
   try {
     let handle = await manager.open('gemini', config);

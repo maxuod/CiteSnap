@@ -1,0 +1,598 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T19:25:46Z",
+  "title": "Design System: AnswerPouch desktop",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Working Orange",
+        "tonalRamp": [
+          "oklch(0.15 0.0643 38.58)",
+          "oklch(0.26 0.1114 38.58)",
+          "oklch(0.38 0.1628 38.58)",
+          "oklch(0.50 0.1714 38.58)",
+          "oklch(0.63 0.1714 38.58)",
+          "oklch(0.75 0.1714 38.58)",
+          "oklch(0.86 0.1200 38.58)",
+          "oklch(0.95 0.0428 38.58)"
+        ]
+      },
+      "brand-orange": {
+        "role": "primary",
+        "displayName": "Bright Brand Orange",
+        "tonalRamp": [
+          "oklch(0.15 0.0679 40.45)",
+          "oklch(0.26 0.1178 40.45)",
+          "oklch(0.38 0.1721 40.45)",
+          "oklch(0.50 0.1812 40.45)",
+          "oklch(0.63 0.1812 40.45)",
+          "oklch(0.75 0.1812 40.45)",
+          "oklch(0.86 0.1268 40.45)",
+          "oklch(0.95 0.0453 40.45)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Deep Working Orange",
+        "tonalRamp": [
+          "oklch(0.15 0.0596 37.43)",
+          "oklch(0.26 0.1033 37.43)",
+          "oklch(0.38 0.1509 37.43)",
+          "oklch(0.50 0.1589 37.43)",
+          "oklch(0.63 0.1589 37.43)",
+          "oklch(0.75 0.1589 37.43)",
+          "oklch(0.86 0.1112 37.43)",
+          "oklch(0.95 0.0397 37.43)"
+        ]
+      },
+      "tint": {
+        "role": "primary",
+        "displayName": "Apricot Tint",
+        "tonalRamp": [
+          "oklch(0.15 0.0082 58.79)",
+          "oklch(0.26 0.0142 58.79)",
+          "oklch(0.38 0.0208 58.79)",
+          "oklch(0.50 0.0219 58.79)",
+          "oklch(0.63 0.0219 58.79)",
+          "oklch(0.75 0.0219 58.79)",
+          "oklch(0.86 0.0153 58.79)",
+          "oklch(0.95 0.0055 58.79)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(0.15 0.0028 61.46)",
+          "oklch(0.26 0.0049 61.46)",
+          "oklch(0.38 0.0072 61.46)",
+          "oklch(0.50 0.0075 61.46)",
+          "oklch(0.63 0.0075 61.46)",
+          "oklch(0.75 0.0075 61.46)",
+          "oklch(0.86 0.0053 61.46)",
+          "oklch(0.95 0.0019 61.46)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White Work Surface",
+        "tonalRamp": [
+          "oklch(0.15 0.0000 0.00)",
+          "oklch(0.26 0.0000 0.00)",
+          "oklch(0.38 0.0000 0.00)",
+          "oklch(0.50 0.0000 0.00)",
+          "oklch(0.63 0.0000 0.00)",
+          "oklch(0.75 0.0000 0.00)",
+          "oklch(0.86 0.0000 0.00)",
+          "oklch(0.95 0.0000 0.00)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.0032 75.21)",
+          "oklch(0.26 0.0056 75.21)",
+          "oklch(0.38 0.0082 75.21)",
+          "oklch(0.50 0.0086 75.21)",
+          "oklch(0.63 0.0086 75.21)",
+          "oklch(0.75 0.0086 75.21)",
+          "oklch(0.86 0.0060 75.21)",
+          "oklch(0.95 0.0022 75.21)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Warm Muted Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.0071 58.34)",
+          "oklch(0.26 0.0123 58.34)",
+          "oklch(0.38 0.0180 58.34)",
+          "oklch(0.50 0.0189 58.34)",
+          "oklch(0.63 0.0189 58.34)",
+          "oklch(0.75 0.0189 58.34)",
+          "oklch(0.86 0.0132 58.34)",
+          "oklch(0.95 0.0047 58.34)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Warm Rule",
+        "tonalRamp": [
+          "oklch(0.15 0.0058 61.33)",
+          "oklch(0.26 0.0100 61.33)",
+          "oklch(0.38 0.0147 61.33)",
+          "oklch(0.50 0.0155 61.33)",
+          "oklch(0.63 0.0155 61.33)",
+          "oklch(0.75 0.0155 61.33)",
+          "oklch(0.86 0.0108 61.33)",
+          "oklch(0.95 0.0039 61.33)"
+        ]
+      },
+      "input-border": {
+        "role": "neutral",
+        "displayName": "Input Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0102 63.61)",
+          "oklch(0.26 0.0176 63.61)",
+          "oklch(0.38 0.0257 63.61)",
+          "oklch(0.50 0.0271 63.61)",
+          "oklch(0.63 0.0271 63.61)",
+          "oklch(0.75 0.0271 63.61)",
+          "oklch(0.86 0.0190 63.61)",
+          "oklch(0.95 0.0068 63.61)"
+        ]
+      },
+      "hover-border": {
+        "role": "neutral",
+        "displayName": "Hover Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0225 61.77)",
+          "oklch(0.26 0.0390 61.77)",
+          "oklch(0.38 0.0570 61.77)",
+          "oklch(0.50 0.0600 61.77)",
+          "oklch(0.63 0.0600 61.77)",
+          "oklch(0.75 0.0600 61.77)",
+          "oklch(0.86 0.0420 61.77)",
+          "oklch(0.95 0.0150 61.77)"
+        ]
+      },
+      "import-border": {
+        "role": "neutral",
+        "displayName": "Import Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0110 62.21)",
+          "oklch(0.26 0.0191 62.21)",
+          "oklch(0.38 0.0279 62.21)",
+          "oklch(0.50 0.0294 62.21)",
+          "oklch(0.63 0.0294 62.21)",
+          "oklch(0.75 0.0294 62.21)",
+          "oklch(0.86 0.0205 62.21)",
+          "oklch(0.95 0.0073 62.21)"
+        ]
+      },
+      "source-divider": {
+        "role": "neutral",
+        "displayName": "Source Divider",
+        "tonalRamp": [
+          "oklch(0.15 0.0042 63.35)",
+          "oklch(0.26 0.0072 63.35)",
+          "oklch(0.38 0.0105 63.35)",
+          "oklch(0.50 0.0111 63.35)",
+          "oklch(0.63 0.0111 63.35)",
+          "oklch(0.75 0.0111 63.35)",
+          "oklch(0.86 0.0078 63.35)",
+          "oklch(0.95 0.0028 63.35)"
+        ]
+      },
+      "positive": {
+        "role": "semantic",
+        "displayName": "Positive State",
+        "tonalRamp": [
+          "oklch(0.15 0.0333 154.77)",
+          "oklch(0.26 0.0578 154.77)",
+          "oklch(0.38 0.0844 154.77)",
+          "oklch(0.50 0.0889 154.77)",
+          "oklch(0.63 0.0889 154.77)",
+          "oklch(0.75 0.0889 154.77)",
+          "oklch(0.86 0.0622 154.77)",
+          "oklch(0.95 0.0222 154.77)"
+        ]
+      },
+      "negative": {
+        "role": "semantic",
+        "displayName": "Negative State",
+        "tonalRamp": [
+          "oklch(0.15 0.0588 28.58)",
+          "oklch(0.26 0.1019 28.58)",
+          "oklch(0.38 0.1489 28.58)",
+          "oklch(0.50 0.1568 28.58)",
+          "oklch(0.63 0.1568 28.58)",
+          "oklch(0.75 0.1568 28.58)",
+          "oklch(0.86 0.1098 28.58)",
+          "oklch(0.95 0.0392 28.58)"
+        ]
+      },
+      "attention": {
+        "role": "semantic",
+        "displayName": "Attention State",
+        "tonalRamp": [
+          "oklch(0.15 0.0401 67.88)",
+          "oklch(0.26 0.0694 67.88)",
+          "oklch(0.38 0.1015 67.88)",
+          "oklch(0.50 0.1068 67.88)",
+          "oklch(0.63 0.1068 67.88)",
+          "oklch(0.75 0.1068 67.88)",
+          "oklch(0.86 0.0748 67.88)",
+          "oklch(0.95 0.0267 67.88)"
+        ]
+      },
+      "notice-surface": {
+        "role": "neutral",
+        "displayName": "Warm Notice Surface",
+        "tonalRamp": [
+          "oklch(0.15 0.0079 56.13)",
+          "oklch(0.26 0.0137 56.13)",
+          "oklch(0.38 0.0200 56.13)",
+          "oklch(0.50 0.0211 56.13)",
+          "oklch(0.63 0.0211 56.13)",
+          "oklch(0.75 0.0211 56.13)",
+          "oklch(0.86 0.0147 56.13)",
+          "oklch(0.95 0.0053 56.13)"
+        ]
+      },
+      "notice-border": {
+        "role": "neutral",
+        "displayName": "Warm Notice Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0213 57.23)",
+          "oklch(0.26 0.0370 57.23)",
+          "oklch(0.38 0.0541 57.23)",
+          "oklch(0.50 0.0569 57.23)",
+          "oklch(0.63 0.0569 57.23)",
+          "oklch(0.75 0.0569 57.23)",
+          "oklch(0.86 0.0398 57.23)",
+          "oklch(0.95 0.0142 57.23)"
+        ]
+      },
+      "notice-ink": {
+        "role": "neutral",
+        "displayName": "Warm Notice Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.0349 47.81)",
+          "oklch(0.26 0.0605 47.81)",
+          "oklch(0.38 0.0884 47.81)",
+          "oklch(0.50 0.0931 47.81)",
+          "oklch(0.63 0.0931 47.81)",
+          "oklch(0.75 0.0931 47.81)",
+          "oklch(0.86 0.0652 47.81)",
+          "oklch(0.95 0.0233 47.81)"
+        ]
+      },
+      "error-surface": {
+        "role": "semantic",
+        "displayName": "Error Surface",
+        "tonalRamp": [
+          "oklch(0.15 0.0063 31.08)",
+          "oklch(0.26 0.0109 31.08)",
+          "oklch(0.38 0.0159 31.08)",
+          "oklch(0.50 0.0168 31.08)",
+          "oklch(0.63 0.0168 31.08)",
+          "oklch(0.75 0.0168 31.08)",
+          "oklch(0.86 0.0117 31.08)",
+          "oklch(0.95 0.0042 31.08)"
+        ]
+      },
+      "error-border": {
+        "role": "semantic",
+        "displayName": "Error Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0212 26.59)",
+          "oklch(0.26 0.0367 26.59)",
+          "oklch(0.38 0.0537 26.59)",
+          "oklch(0.50 0.0565 26.59)",
+          "oklch(0.63 0.0565 26.59)",
+          "oklch(0.75 0.0565 26.59)",
+          "oklch(0.86 0.0396 26.59)",
+          "oklch(0.95 0.0141 26.59)"
+        ]
+      },
+      "success-surface": {
+        "role": "semantic",
+        "displayName": "Success Surface",
+        "tonalRamp": [
+          "oklch(0.15 0.0053 148.78)",
+          "oklch(0.26 0.0092 148.78)",
+          "oklch(0.38 0.0135 148.78)",
+          "oklch(0.50 0.0142 148.78)",
+          "oklch(0.63 0.0142 148.78)",
+          "oklch(0.75 0.0142 148.78)",
+          "oklch(0.86 0.0099 148.78)",
+          "oklch(0.95 0.0036 148.78)"
+        ]
+      },
+      "success-border": {
+        "role": "semantic",
+        "displayName": "Success Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0139 146.51)",
+          "oklch(0.26 0.0240 146.51)",
+          "oklch(0.38 0.0351 146.51)",
+          "oklch(0.50 0.0370 146.51)",
+          "oklch(0.63 0.0370 146.51)",
+          "oklch(0.75 0.0370 146.51)",
+          "oklch(0.86 0.0259 146.51)",
+          "oklch(0.95 0.0092 146.51)"
+        ]
+      },
+      "risk-ink": {
+        "role": "semantic",
+        "displayName": "Risk Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.0336 62.52)",
+          "oklch(0.26 0.0582 62.52)",
+          "oklch(0.38 0.0850 62.52)",
+          "oklch(0.50 0.0895 62.52)",
+          "oklch(0.63 0.0895 62.52)",
+          "oklch(0.75 0.0895 62.52)",
+          "oklch(0.86 0.0626 62.52)",
+          "oklch(0.95 0.0224 62.52)"
+        ]
+      },
+      "risk-surface": {
+        "role": "semantic",
+        "displayName": "Strong Risk Surface",
+        "tonalRamp": [
+          "oklch(0.15 0.0146 82.35)",
+          "oklch(0.26 0.0253 82.35)",
+          "oklch(0.38 0.0370 82.35)",
+          "oklch(0.50 0.0389 82.35)",
+          "oklch(0.63 0.0389 82.35)",
+          "oklch(0.75 0.0389 82.35)",
+          "oklch(0.86 0.0272 82.35)",
+          "oklch(0.95 0.0097 82.35)"
+        ]
+      },
+      "risk-border": {
+        "role": "semantic",
+        "displayName": "Strong Risk Border",
+        "tonalRamp": [
+          "oklch(0.15 0.0365 82.09)",
+          "oklch(0.26 0.0633 82.09)",
+          "oklch(0.38 0.0926 82.09)",
+          "oklch(0.50 0.0974 82.09)",
+          "oklch(0.63 0.0974 82.09)",
+          "oklch(0.75 0.0974 82.09)",
+          "oklch(0.86 0.0682 82.09)",
+          "oklch(0.95 0.0244 82.09)"
+        ]
+      },
+      "table-head": {
+        "role": "neutral",
+        "displayName": "Pale Table Head",
+        "tonalRamp": [
+          "oklch(0.15 0.0083 63.21)",
+          "oklch(0.26 0.0143 63.21)",
+          "oklch(0.38 0.0209 63.21)",
+          "oklch(0.50 0.0220 63.21)",
+          "oklch(0.63 0.0220 63.21)",
+          "oklch(0.75 0.0220 63.21)",
+          "oklch(0.86 0.0154 63.21)",
+          "oklch(0.95 0.0055 63.21)"
+        ]
+      },
+      "table-divider": {
+        "role": "neutral",
+        "displayName": "Table Divider",
+        "tonalRamp": [
+          "oklch(0.15 0.0055 64.33)",
+          "oklch(0.26 0.0095 64.33)",
+          "oklch(0.38 0.0138 64.33)",
+          "oklch(0.50 0.0146 64.33)",
+          "oklch(0.63 0.0146 64.33)",
+          "oklch(0.75 0.0146 64.33)",
+          "oklch(0.86 0.0102 64.33)",
+          "oklch(0.95 0.0036 64.33)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main heading; compact override at the narrow breakpoint."
+      },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "Local Bricolage wordmark beside the mouthless owned mascot."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Task-group and results headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel, notice-context and evidence headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Working English/Chinese copy in the platform system stack."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Semibold controls and source names."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Hints and secondary working metadata."
+      },
+      "status": {
+        "displayName": "Status",
+        "purpose": "Written source/account/task state, paired with semantic color."
+      },
+      "evidence": {
+        "displayName": "Original evidence",
+        "purpose": "Proportional original answer text with preserved line breaks and wrapping."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "collection-hop-duration",
+        "value": "1.6s",
+        "purpose": "Repeat only while collection is actually active; stops at idle/complete."
+      },
+      {
+        "name": "collection-hop-easing",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "The single owned-mascot activity bounce."
+      },
+      {
+        "name": "collection-hop-keyframes",
+        "value": "0%,70%,100% { transform:translateY(0) } 35% { transform:translateY(-5px) rotate(-5deg) }",
+        "purpose": "Matches the source activity silhouette; no button-hover transform is defined."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation:none!important;scroll-behavior:auto!important",
+        "purpose": "Applied to every element and pseudo-element when prefers-reduced-motion:reduce matches."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "900px"
+      },
+      {
+        "name": "single-column",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The enabled main action; disabled readiness retains the same geometry.",
+      "html": "<button class=\"ds-primary\">Start collecting</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#e6dcd4);border-radius:8px;padding:9px 14px;background:white;font:600 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--ink,#26231f);cursor:pointer;background:var(--orange,#c74818);border-color:var(--orange,#c74818);color:white}.ds-primary:hover{background:#ad3910}.ds-primary:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-primary:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Local preparation, export and compact evidence/account actions.",
+      "html": "<button class=\"ds-secondary\">Freeze &amp; save</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#e6dcd4);border-radius:8px;padding:9px 14px;background:white;font:600 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--ink,#26231f);cursor:pointer}.ds-secondary:hover{background:var(--tint,#fff0e5);border-color:#dcb798}.ds-secondary:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-secondary:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Stop Button",
+      "kind": "button",
+      "refersTo": "button-stop",
+      "description": "The collection stop action uses red ink without a filled red surface.",
+      "html": "<button class=\"ds-stop\">Stop collection</button>",
+      "css": ".ds-stop{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#e6dcd4);border-radius:8px;padding:9px 14px;background:white;font:600 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--ink,#26231f);cursor:pointer;color:var(--red,#a62f26);border-color:#d9a39c}.ds-stop:hover{background:var(--tint,#fff0e5);border-color:#dcb798}.ds-stop:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-stop:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Quiet Action",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Language, account check, dismiss and close actions gain a tinted hover.",
+      "html": "<button class=\"ds-quiet\" aria-label=\"Switch to English\">EN</button>",
+      "css": ".ds-quiet{background:transparent;border:0;color:var(--ink,#26231f);padding:6px 9px;font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-quiet:hover{color:var(--orange,#c74818);background:var(--tint,#fff0e5);border-radius:7px}.ds-quiet:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-quiet:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "An explicitly labelled white field with a warm outline and orange keyboard focus.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-set-name\">Question set name</label><input class=\"ds-field\" id=\"ds-set-name\" placeholder=\"A name you will recognise\">",
+      "css": ".ds-field-label{display:block;margin-bottom:6px;color:var(--ink,#26231f);font:600 14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-field{width:100%;border:1px solid #baaa9c;background:white;border-radius:8px;padding:10px 12px;color:var(--ink,#26231f);caret-color:var(--orange,#c74818);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-field:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}"
+    },
+    {
+      "name": "Imported Questions Card",
+      "kind": "card",
+      "refersTo": "import-card",
+      "description": "Empty imports use a dashed border; the imported state changes it to solid.",
+      "html": "<section class=\"ds-import ds-import-ready\"><h3>Imported frozen set</h3><p><strong>Component example · 组件示例</strong> · 2 questions</p><ol><li>Original question one?</li><li>原始问题二？</li></ol><button class=\"ds-import-button\">Import frozen questions</button></section>",
+      "css": ".ds-import{background:white;border:1px dashed #c8b6a7;border-radius:14px;padding:18px;display:flex;flex-direction:column;align-items:start;justify-content:center;min-height:208px;color:var(--ink,#26231f);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-import-ready{border-style:solid}.ds-import h3{font-size:16px;margin:0 0 6px}.ds-import p{margin:0 0 10px}.ds-import ol{margin:10px 0 13px;padding-left:20px;max-height:112px;overflow:auto;font-size:13px;width:100%;overflow-wrap:anywhere}.ds-import-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#e6dcd4);border-radius:8px;padding:9px 14px;background:white;font:600 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--ink,#26231f);cursor:pointer}.ds-import-button:hover{background:var(--tint,#fff0e5);border-color:#dcb798}.ds-import-button:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-import-button:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Source Row",
+      "kind": "custom",
+      "description": "Native checkbox, source name, written account state and compact actions on one warm ruled row.",
+      "html": "<div class=\"ds-source\"><input id=\"ds-source-example\" type=\"checkbox\" aria-label=\"Gemini\"><label class=\"ds-source-name\" for=\"ds-source-example\"><strong>Gemini</strong><span class=\"ds-source-status\">Login saved · check required</span></label><button class=\"ds-source-button\">Restore login</button><button class=\"ds-source-check\">Check</button></div>",
+      "css": ".ds-source{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eee7e1;color:var(--ink,#26231f);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-source input{accent-color:var(--orange,#c74818);width:16px;height:16px;flex-shrink:0}.ds-source input:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-source-name{flex:1;min-width:0}.ds-source-name strong{display:block;font-weight:600}.ds-source-status{display:inline-flex;font-size:11px;font-weight:600;line-height:1.5;white-space:nowrap;color:var(--amber,#8c570b)}.ds-source-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line,#e6dcd4);border-radius:8px;padding:9px 14px;background:white;font:600 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--ink,#26231f);cursor:pointer;font-size:12px;padding:6px 9px}.ds-source-check{background:transparent;border:0;color:var(--ink,#26231f);padding:6px 9px;font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-source-button:hover{background:var(--tint,#fff0e5);border-color:#dcb798}.ds-source-button:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-source-button:disabled{cursor:not-allowed;opacity:.5}.ds-source-check:hover{color:var(--orange,#c74818);background:var(--tint,#fff0e5);border-radius:7px}.ds-source-check:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-source-check:disabled{cursor:not-allowed;opacity:.5}@media(max-width:900px){.ds-source{gap:8px}.ds-source-button{padding:5px 7px}}"
+    },
+    {
+      "name": "Computer Network Notice",
+      "kind": "card",
+      "refersTo": "network-card",
+      "description": "A tinted contextual aside; host facts and unverified network state are different from the UI language action.",
+      "html": "<aside class=\"ds-network\"><h3>This computer’s network</h3><p>Collection uses this computer’s actual network connection. The app has no country, proxy or location switch.</p><dl><dt>Network country</dt><dd>Unverified</dd></dl><p>A system VPN or proxy can affect the actual network exit; this app does not change it or verify physical location.</p></aside>",
+      "css": ".ds-network{background:var(--tint,#fff0e5);padding:19px;border-radius:14px;align-self:start;color:var(--ink,#26231f);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-network h3{font-size:16px;margin:0 0 6px}.ds-network p{font-size:12px;color:#6e4934;margin:0 0 10px}.ds-network dl{display:grid;grid-template-columns:95px 1fr;gap:6px 10px;margin:14px 0;font-size:12px}.ds-network dt{color:#805038}.ds-network dd{margin:0;overflow-wrap:anywhere}@media(max-width:900px){.ds-network dl{grid-template-columns:1fr}}"
+    },
+    {
+      "name": "Feedback Notices",
+      "kind": "custom",
+      "refersTo": "notice",
+      "description": "Warm, error and success feedback pair readable text with soft state surfaces and borders.",
+      "html": "<div class=\"ds-notice\" role=\"status\">Frozen file saved <button class=\"ds-notice-dismiss\">Dismiss</button></div><div class=\"ds-notice ds-notice-error\" role=\"alert\">The account is not confirmed yet.</div><div class=\"ds-notice ds-notice-success\" role=\"status\">Evidence file saved</div>",
+      "css": ".ds-notice{margin:14px 0;padding:12px 16px;background:#fff0e6;border:1px solid #e6c0a5;border-radius:10px;color:#753b1a;font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-notice-error{color:var(--red,#a62f26);background:#fff0ed;border-color:#e8b8b2}.ds-notice-success{color:var(--green,#276641);background:#eef7ef;border-color:#c7ddc8}.ds-notice-dismiss{background:transparent;border:0;color:var(--ink,#26231f);padding:6px 9px;font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-notice-dismiss:hover{color:var(--orange,#c74818);background:var(--tint,#fff0e5);border-radius:7px}.ds-notice-dismiss:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-notice-dismiss:disabled{cursor:not-allowed;opacity:.5}"
+    },
+    {
+      "name": "Original Evidence Reader",
+      "kind": "custom",
+      "refersTo": "evidence-reader",
+      "description": "Proportional readable original text, explicit citation completeness and wrapped metadata. Demonstration content only.",
+      "html": "<article class=\"ds-evidence\"><div class=\"ds-evidence-head\"><h3 tabindex=\"-1\">Original answer</h3><button class=\"ds-evidence-close\">Close</button></div><p class=\"ds-evidence-hint\">Component example · 组件示例</p><p><strong>Original frozen question?</strong></p><pre>Example original answer.\n示例原始回答，保留换行。</pre><h3>Captured citation links</h3><p class=\"ds-evidence-hint\">Source coverage: Incomplete or unconfirmed</p><ol><li><button class=\"ds-evidence-link\">Example source — https://example.test/original-source</button></li></ol><p class=\"ds-evidence-hash\">Evidence SHA-256 · example only</p></article>",
+      "css": ".ds-evidence{margin-top:18px;padding:20px;background:white;border:1px solid var(--line,#e6dcd4);border-radius:14px;color:var(--ink,#26231f);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.ds-evidence-head{display:flex;justify-content:space-between;align-items:start;gap:20px;margin-bottom:16px}.ds-evidence h3{font-size:16px;margin:0 0 6px}.ds-evidence p{margin:0 0 10px}.ds-evidence-hint{color:var(--muted,#6b6058);font-size:12px;line-height:1.7}.ds-evidence pre{font:13px/1.8 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;max-height:380px;overflow:auto;margin:12px 0}.ds-evidence ol{padding-left:20px}.ds-evidence-close,.ds-evidence-link{background:transparent;border:0;color:var(--ink,#26231f);padding:6px 9px;font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;cursor:pointer}.ds-evidence-link{text-align:left;color:var(--orange,#c74818);overflow-wrap:anywhere;max-width:100%}.ds-evidence-hash{font-size:11px;color:var(--muted,#6b6058);overflow-wrap:anywhere;max-width:100%}.ds-evidence-close:hover{color:var(--orange,#c74818);background:var(--tint,#fff0e5);border-radius:7px}.ds-evidence-close:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-evidence-close:disabled{cursor:not-allowed;opacity:.5}.ds-evidence-link:hover{color:var(--orange,#c74818);background:var(--tint,#fff0e5);border-radius:7px}.ds-evidence-link:focus-visible{outline:3px solid var(--orange,#c74818);outline-offset:4px}.ds-evidence-link:disabled{cursor:not-allowed;opacity:.5}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A warm local evidence workspace",
+    "overview": "This is a descriptive name for the accepted implementation, not a new visual-world proposal. AnswerPouch inherits the approved warm orange/white world: an owned mouthless mascot, weighty Bricolage brand lettering, warm paper and white work surfaces. Its personality is lightly playful in the identity and restrained in the working content. The system remains a desktop workspace with generous separation between task groups, compact source rows and dense evidence when there is evidence to read.\n\nThe visual hierarchy makes the current action and its state legible. Borders, surface tone, readable labels and explicit status text do the work; color alone does not establish readiness or completion. Original answers keep a reading voice rather than becoming code blocks or promotional summaries. English and Chinese share the same structure, with system fonts carrying working text and Chinese glyphs.",
+    "keyCharacteristics": [
+      "Warm paper surrounds white work areas and a single orange action family.",
+      "A mouthless owned mascot and Bricolage lettering carry the playful identity.",
+      "Rounded controls, fine borders and generous task-group gaps create a calm working rhythm.",
+      "Dense source rows and evidence remain readable through wrapping and contained scrolling.",
+      "State is expressed in words as well as color, with visible keyboard focus and bounded motion."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence State Rule",
+        "body": "Preserve a written state beside every semantic color. Saved login, confirmed account, captured answer, incomplete citation coverage and stopped work must remain visually distinguishable by text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Original Voice Rule",
+        "body": "The evidence reader preserves the answer's original text and line breaks. Do not restyle it as a monospace console, silently shorten it or translate it when the interface language changes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Workspace Rule",
+        "body": "Extend the existing tonal and border hierarchy. Do not add floating shadows or glass to make ordinary controls and evidence feel important.",
+        "section": "elevation & depth"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the owned mouthless mascot, local Bricolage brand face and warm paper/white working surfaces.",
+      "**Do** use the functional orange for actions and focus, keeping semantic status wording visible beside color.",
+      "**Do** retain generous section gaps while allowing source rows and original evidence to be appropriately dense.",
+      "**Do** wrap hashes, original answers and URLs, and contain long previews/evidence within their source scroll regions.",
+      "**Do** keep focus visible and preserve the evidence open/close keyboard handoff through state refreshes.",
+      "**Do** honor reduced motion and animate the mascot only while collection is actually active.",
+      "**Do** keep Chinese and English controls structurally equivalent, independent of the host locale, network and original evidence language."
+    ],
+    "donts": [
+      "**Don't** replace the mouthless mascot, add a mouth or treat asset reuse as a generated-image claim.",
+      "**Don't** add shadows, glass, gradients or decorative dashboard cards to this flat working system.",
+      "**Don't** present saved login as confirmed access or color alone as proof of a complete answer or citation set.",
+      "**Don't** truncate or translate original evidence in the reader when changing interface language.",
+      "**Don't** style the language switch as a country, proxy, location or network control.",
+      "**Don't** populate the customer starting state with the synthetic evidence used in visual acceptance captures."
+    ]
+  }
+}

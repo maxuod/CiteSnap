@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "imageSha256": "fa79c970955c32d8f35ff7f06b11418b03a0cbc9846a3c35ce435d69259e5d02",
+  "manifestEntriesMatch": 642,
+  "mountedReadOnly": true,
+  "deepStrictSignature": true,
+  "cleanMachineAcceptance": false
+}

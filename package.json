@@ -1,6 +1,6 @@
 {
   "name": "@maxuod/answerpouch",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Local AI answer and citation collection, with portable source evidence.",
   "type": "commonjs",
@@ -41,16 +41,25 @@
   "scripts": {
     "test": "vitest run",
     "check": "node --check index.cjs && node --check bin/answerpouch.cjs",
-    "start": "node bin/answerpouch.cjs"
+    "start": "node bin/answerpouch.cjs",
+    "desktop": "electron desktop/main.cjs",
+    "prepare-browser": "node scripts/prepare-browser.mjs",
+    "package-desktop": "node scripts/package-desktop.mjs",
+    "verify-desktop": "node scripts/verify-desktop.mjs",
+    "verify-package": "node scripts/verify-package.mjs",
+    "release-check": "node scripts/check-release.mjs"
   },
   "dependencies": {
     "playwright-core": "1.63.0",
     "zod": "4.6.7"
   },
   "devDependencies": {
-    "vitest": "4.1.11",
+    "@electron/osx-sign": "2.7.2",
+    "@electron/packager": "20.3.0",
+    "@types/node": "22.15.0",
+    "electron": "45.2.1",
     "linkedom": "0.18.13",
     "typescript": "5.9.3",
-    "@types/node": "22.15.0"
+    "vitest": "4.1.11"
   }
 }

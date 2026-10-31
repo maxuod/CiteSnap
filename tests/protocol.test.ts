@@ -38,7 +38,7 @@ describe('independent evidence interchange',()=>{
  it('has no package runtime dependency on Electron, getaudit, GSC or its database',()=>{
   const pkg=require('../package.json');expect(Object.keys(pkg.dependencies).sort()).toEqual(['playwright-core','zod']);
   const manifest=require('../source-provenance.json');
-  for(const entry of manifest.modules){const bytes=readFileSync(new URL('../'+entry.target,import.meta.url));expect(createHash('sha256').update(bytes).digest('hex')).toBe(entry.sha256);}
+  for(const entry of manifest.runtimeRevision?.modules||manifest.modules){const bytes=readFileSync(new URL('../'+entry.target,import.meta.url));expect(createHash('sha256').update(bytes).digest('hex')).toBe(entry.sha256);}
  });
 });
 describe('offline CLI safeguards',()=>{

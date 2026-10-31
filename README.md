@@ -1,51 +1,43 @@
 # AnswerPouch · 答袋
 
-Collect AI answers. Keep the sources.
+Collect original AI answers. Keep their source evidence.
 
-AnswerPouch is a standalone local browser collector extracted from getaudit. It captures original AI answers, source citations and bounded artifacts with observed access/session/coverage conditions. It can be consumed by getaudit or another compatible program without a GEO database or Electron application.
+Independent local collector for SEO/GEO researchers, separated from getaudit. The 0.2.0 desktop candidate includes its own browser. Customers do not need Node.js, terminal commands, developer keys or JSON configuration. It starts empty, without a sample project.
 
-**Delivery:** a local extraction with synthetic validation. The name is provisional. No public repository/package or new live-platform acceptance is implied.
+## Customer flow
 
-## Start
+1. Paste questions and **Freeze & save** the local file.
+2. **Import** the frozen file; exact wording/order and its hash are checked.
+3. Select sources, sign into **your own accounts**, acknowledge the request/account and local-network notices, then **Start collecting**. Inspect original answers/citations and **Export evidence**.
 
-Requires Node.js 22.19+ and standard Google Chrome installed on macOS. Browser platform availability and account restrictions can change.
+Adapters cover ChatGPT Search, Gemini, Copilot, Perplexity, Grok and Google AI Overview. Real access, sign-in, complete answers and citations depend on the platform. This new desktop's real-provider acceptance remains unverified.
 
-```sh
-npm ci
-npm test
-node bin/answerpouch.cjs doctor
-node bin/answerpouch.cjs check-task examples/guest-task.json
-```
+Frequent/large automated requests may trigger verification, rate limits, temporary restrictions or account suspension. Sequential requests, 45-second gaps and a conservative local daily guard do not establish safe usage. Restrictions stop the batch. Submitted-but-unknown tasks remain uncertain and never replay automatically. Repeated observations require a separate acknowledgement.
 
-`doctor`, `check-task`, help and offline verification do not open a browser or submit a question. To explicitly collect one question, inspect the task first, choose a fresh private output path and acknowledge transmission:
+Collection uses the computer's actual network and browser defaults. There is no country, proxy, timezone or location switch. UI language does not simulate location. A system VPN/proxy can affect the exit; physical location and network country are unverified.
 
-```sh
-node bin/answerpouch.cjs collect --task examples/guest-task.json --output /private/new-capture.json --acknowledge-transfer
-node bin/answerpouch.cjs verify /private/new-capture.json
-```
+## Delivery
 
-Replace the illustrative output with a writable private location. Each invocation performs at most one question; access restrictions stop it. There is no automatic retry, visible fallback or paid/API fallback. The first CLI uses strict signed-out sessions; library integrations retain explicit dedicated-profile login operations.
+Local source/candidate only; no collector public repository/package, installer publication or deployment has occurred. Initial target: **Apple Silicon macOS 13 or newer**. A local certificate is not Developer ID or notarization. Official signing, Apple notarization, clean-Mac download acceptance and real platform sign-in/capture remain before claiming a frictionless public release. Windows/Intel support is not claimed.
 
-## Library
+The hosted [getaudit-web](https://github.com/maxuod/getaudit-web) project is private and separate. It cannot access local profiles. Existing installed getaudit 0.4.47 is untouched and its source remains pinned to the extracted 0.1.0 library; this desktop does not silently upgrade it.
 
-```js
-const {createCollector, createEvidence, verifyEvidence} = require('@maxuod/answerpouch');
-const collector = createCollector(); // Does not launch a browser.
-// An explicit caller can now collect a validated task and close in finally.
-```
+## Data and evidence
 
-`createCollector()` retains getaudit's existing `BrowserCollector` behavior, including cancellation, guest checks, dedicated login preparation/verification and session cleanup. `createChromeCollector` is retained as a compatibility alias. The seven extracted runtime modules are exported individually for compatibility and focused tests. See [the evidence protocol](docs/protocol.md).
+The application stores questions/checkpoints/captures locally, with separate dedicated AI profiles. Import, saved evidence reading and UI language changes send no questions. This collector has no cloud upload. Questions are sent to the selected external platforms only when started. Opening a saved source link is an explicit action in the system browser.
 
-## Responsibilities
+Original question text/order, answer text, citations, bounded artifacts, timestamps and observed account/access conditions retain hashes. An account-unverified observed capture is retained but excluded from confirmed observations. Exports can contain customer content; share within its authorization. A hash detects changed bytes relative to a trusted retained hash; it is not platform attestation. See [local formats](docs/local-format.md), [legacy protocol](docs/protocol.md) and [delivery](docs/desktop-delivery.md).
 
-AnswerPouch owns browser interaction, platform extraction, dedicated profile lifecycle and raw capture. getaudit owns projects, question planning, persistent jobs/submission checkpoints, GSC, evidence quality assessment, brand/citation calculations, editing suggestions and reports. The two projects do not share a database. The hosted web app does not gain access to a local browser or its accounts through this extraction.
+## Development
 
-Only runtime source, schemas, types, this documentation and source-provenance metadata enter a package. Real profiles, credentials, SQLite files and customer captures stay outside the repository. [Source notice](NOTICE.md).
+Requires Node.js 22.19+ for development only. Install locked dependencies, run npm test, npm run prepare-browser and npm run desktop. Native isolated synthetic acceptance: node scripts/verify-desktop.mjs. Packaging: npm run package-desktop, with a configured signing identity; an existing private owner build config may be supplied using --local-signing-config and an absolute path. Never commit signing secrets.
+
+Packaging uses a strict source/dependency allowlist. The library retains compatibility exports and separately records historical 0.1.0 versus current 0.2.0 hashes in source-provenance.json. CLI live guest collection is disabled in 0.2; offline verification remains. Customer collection goes through the desktop's frozen-question, own-account and host-network gates.
 
 ## 中文
 
-AnswerPouch 暂称“答袋”：把 AI 原始回答、引用与采集条件放进一个可核验的证据袋。
+答袋：**冻结问题 → 导入 → 勾选来源并登录自己的账号 → 自动采集 → 查看/导出原始回答与引用**。用户无需安装 Node、敲命令或配置开发者账号。
 
-这是独立的本地采集器项目，可以供 getaudit 或其他程序调用。GEO 分析、GSC、用户账号、数据库、任务调度与报告留在 getaudit。采集器保留现有访问停止、独立登录资料、最小浏览器环境和证据规则。
+沿用橙白与无嘴小人，默认英文，可切换中文。只用本机当前网络，不提供地区/代理切换。请求过多可能触发验证、限流或封号，程序的请求间隔与每日限制不代表安全次数。中断或未确认结果不自动重发。
 
-先运行测试与任务检查；只有明确执行 `collect` 并确认传输才会打开浏览器、向外部平台发送问题。当前命令行一次采集一个未登录问题，不自动重发、不绕过限制，也不调用付费接口。本次分离没有验证新的真实平台回答或实现云端远程采集。
+当前为 Apple Silicon Mac 本地测试版。独立平台登录实测、Apple 正式分发签名/公证及干净机器验收尚待完成，不能称为已公开可用的正式下载。

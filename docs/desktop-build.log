@@ -1,0 +1,7 @@
+
+> @maxuod/answerpouch@0.2.0 package-desktop
+> node scripts/package-desktop.mjs --local-signing-config /Users/Mac/Library/Application Support/GEO Proof Lab Build Signing/config.json
+
+Packaging app for platform darwin arm64 using electron v45.2.1
+WARNING: Could not find icon "/Volumes/X9 Pro/Developer/maxuod/answerpouch/desktop/assets/answerpouch.icns" with extension ".icon", skipping this app icon format
+{"app":"/Volumes/X9 Pro/Developer/maxuod/answerpouch/out/AnswerPouch-darwin-arm64/AnswerPouch.app","version":"0.2.0","signing":{"kind":"local-certificate","certificateBound":true,"notarized":false,"publicDistribution":false},"browserVersion":"153.0.8010.12","fileCount":642}

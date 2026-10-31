@@ -40,5 +40,39 @@
       "target": "lib/capture-artifact.cjs",
       "sha256": "04703f79dde04d1cdbf6512cd9e8daee9eb97ba1d2bfc72f092d6528f585b580"
     }
-  ]
+  ],
+  "runtimeRevision": {
+    "version": "0.2.0",
+    "reason": "Local desktop workflow, configurable bundled browser executable and host environment without locale/timezone overrides",
+    "modules": [
+      {
+        "target": "lib/chrome-collector.cjs",
+        "sha256": "34f8362bdd5bde55e62e14415d54f266e923fa9cc9352aa3b54021da2c8abddd"
+      },
+      {
+        "target": "lib/browser-platforms.cjs",
+        "sha256": "348cebd323733ce3ae8722aa7a1e05a198d4109249694eaa40ebb086837a1bff"
+      },
+      {
+        "target": "lib/browser-extract.cjs",
+        "sha256": "d095517b8aa7a259baaed142e7ed4bfd8e657f968f907aaffa38b21cda350389"
+      },
+      {
+        "target": "lib/platform-profiles.cjs",
+        "sha256": "24f1d091958af6d6daadce5d11dfae81653c11c0ec0ceefe437c338d86862521"
+      },
+      {
+        "target": "lib/browser-environment.cjs",
+        "sha256": "14799434c48dc725625f288e64ec1915abca3cb45b8e5d6571be752be83b1b12"
+      },
+      {
+        "target": "lib/egress-check.cjs",
+        "sha256": "2ebc43026521090abf7d23626506889cb5f866d6629776fd9ee01a6b721ea554"
+      },
+      {
+        "target": "lib/capture-artifact.cjs",
+        "sha256": "04703f79dde04d1cdbf6512cd9e8daee9eb97ba1d2bfc72f092d6528f585b580"
+      }
+    ]
+  }
 }

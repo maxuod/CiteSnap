@@ -1,0 +1,3 @@
+created: /Volumes/X9 Pro/Developer/maxuod/answerpouch/out/AnswerPouch-0.2.0-mac-arm64-local-test.dmghdiutil: WARNING: 'hdiutil create -volname -format ...' is deprecated. Please use 'diskutil image create from/blank --volumeName --format ...' instead.
+
+{"filename":"AnswerPouch-0.2.0-mac-arm64-local-test.dmg","version":"0.2.0","bytes":335361773,"sha256":"fa79c970955c32d8f35ff7f06b11418b03a0cbc9846a3c35ce435d69259e5d02","localTestOnly":true,"notarized":false,"publicDistribution":false}

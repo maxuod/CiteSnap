@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "method": "CUA native accessibility and screenshot",
+  "version": "0.2.0",
+  "sourceMainSha256": "850fe92b731ee79f039047aa9024187b3d6fe0b62f4fe2dc3532c736f64f989c",
+  "emptyWorkspace": true,
+  "plannedRequests": 0,
+  "ownAccountRequired": true,
+  "noStartupError": true,
+  "screenshot": "docs/packaged-native-empty.png",
+  "realPlatformAcceptance": false,
+  "publicDistribution": false,
+  "leftOpen": true
+}

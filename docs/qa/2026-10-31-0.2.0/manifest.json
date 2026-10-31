@@ -1,0 +1,31 @@
+{
+  "kind": "synthetic-native-ui-validation",
+  "version": "0.2.0",
+  "realProviderEvidence": false,
+  "files": [
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-compact-zh.png",
+      "sha256": "3f9a3f57bcb9e85671b3d9eebb57f30bbe773394525193ce32fbff782d13ef4c"
+    },
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-empty-en.png",
+      "sha256": "86f2c78824641528cbd176a03e2b9e0c3037f4d3da182232bd4a4bb6f9d6d15c"
+    },
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-evidence-compact-zh.png",
+      "sha256": "fcc048fac0441899866731f258859a8042d3dc5ceee7524dff35b8bb4892c54e"
+    },
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-evidence-en.png",
+      "sha256": "2431fdd186d2a0835dbb15995e9311c728421a712ea472af1b1fed745b927d87"
+    },
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-evidence-zh.png",
+      "sha256": "5996a287c744c84a4fd57a4b4dad4b1b4ffe29333131f2222283440a7f269976"
+    },
+    {
+      "path": "docs/qa/2026-10-31-0.2.0/desktop-imported-zh.png",
+      "sha256": "0d7d9ecbe9fedb5155af25e271865636e4eea79222a9aeb7f91e2132ef40ac56"
+    }
+  ]
+}

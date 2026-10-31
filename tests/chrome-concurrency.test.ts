@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 const require=createRequire(import.meta.url);
 const source=readFileSync(new URL('../lib/chrome-collector.cjs',import.meta.url),'utf8');
-function fixture(withProfiles=false){
+function fixture(withProfiles=false,options:any={}){
   let launches=0;const contexts:any[]=[],launchOptions:any[]=[],otherBrowsers:any[]=[];let release!:()=>void,launchError:Error|undefined;
   const launched=new Promise<void>(r=>{release=r;});
   const browser={closed:false,isConnected:()=>!browser.closed,version:()=> 'synthetic',close:async()=>{browser.closed=true;},newContext:async(options?:unknown)=>{
@@ -29,11 +29,22 @@ function fixture(withProfiles=false){
     if(name.startsWith('./'))return require('../lib/'+name.slice(2));
     return require(name);
   },AbortController,Buffer,URL});
-  const newCollector=()=>module.exports.createChromeCollector(withProfiles?{profiles}:{});
+  const newCollector=()=>module.exports.createChromeCollector({...options,...(withProfiles?{profiles}:{})});
   return {collector:newCollector(),newCollector,profiles,remembered,contexts,browser,otherBrowsers,launchOptions,release,failLaunch:()=>{launchError=new Error('Synthetic launch failed');},launches:()=>launches};
 }
 const task=(surface:string)=>({planId:'synthetic-plan',slotId:'slot-'+surface,prompt:'Synthetic question for '+surface,surface,config:{accountMode:'signed_out',locale:'en-CA',timezone:'UTC'},timeoutSeconds:45,captureScreenshot:false,verifiedCountry:null,geoVerificationNote:''});
 describe('Chrome parallel session isolation with a synthetic browser',()=>{
+  it('uses the bundled executable with host defaults and no location, timezone or proxy override',async()=>{
+    const f=fixture(false,{hostEnvironment:true,executablePath:'/synthetic/bundled/browser'});f.release();
+    await f.collector.collect(task('gemini'),new AbortController().signal,()=>{});
+    expect(f.launchOptions[0].executablePath).toBe('/synthetic/bundled/browser');
+    expect(f.launchOptions[0]).not.toHaveProperty('proxy');
+    expect(Object.keys(f.launchOptions[0].env).every(k=>['HOME','PATH','TMPDIR','LANG'].includes(k))).toBe(true);
+    expect(f.contexts[0].options).not.toHaveProperty('timezoneId');expect(f.contexts[0].options).not.toHaveProperty('locale');
+    expect(f.contexts[0].options).not.toHaveProperty('geolocation');expect(f.contexts[0].options.permissions).toEqual([]);
+    await f.collector.close();
+  });
+
   it('keeps confirmed account preparation after closing its page and reopens the same context',async()=>{
     const f=fixture(true);f.release();const signed={...task('chatgpt_search'),config:{...task('chatgpt_search').config,accountMode:'isolated'}};
     await f.collector.prepareSession(signed);const login=f.contexts[0];login.page.snapshot={body:'',signedIn:true};

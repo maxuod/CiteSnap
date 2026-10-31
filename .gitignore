@@ -9,3 +9,6 @@ profiles/
 *.db-*
 *.enc
 .DS_Store
+.browser-runtime/
+out/
+.impeccable/
