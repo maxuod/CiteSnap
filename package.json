@@ -1,0 +1,56 @@
+{
+  "name": "@maxuod/answerpouch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local AI answer and citation collection, with portable source evidence.",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "bin": {
+    "answerpouch": "bin/answerpouch.cjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.cjs",
+      "default": "./index.cjs"
+    },
+    "./protocol": "./lib/protocol.cjs",
+    "./package.json": "./package.json",
+    "./chrome-collector": "./lib/chrome-collector.cjs",
+    "./browser-platforms": "./lib/browser-platforms.cjs",
+    "./browser-extract": "./lib/browser-extract.cjs",
+    "./platform-profiles": "./lib/platform-profiles.cjs",
+    "./browser-environment": "./lib/browser-environment.cjs",
+    "./egress-check": "./lib/egress-check.cjs",
+    "./capture-artifact": "./lib/capture-artifact.cjs"
+  },
+  "files": [
+    "index.cjs",
+    "index.d.ts",
+    "lib/",
+    "bin/",
+    "README.md",
+    "NOTICE.md",
+    "docs/protocol.md",
+    "source-provenance.json"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "check": "node --check index.cjs && node --check bin/answerpouch.cjs",
+    "start": "node bin/answerpouch.cjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11",
+    "linkedom": "0.18.13",
+    "typescript": "5.9.3",
+    "@types/node": "22.15.0"
+  }
+}

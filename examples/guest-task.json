@@ -1,0 +1,20 @@
+{
+  "planId": "example-guest-plan",
+  "slotId": "example-guest-question",
+  "prompt": "What is the difference between weather and climate? Include source links.",
+  "surface": "gemini",
+  "config": {
+    "country": "CA",
+    "locale": "en-CA",
+    "timezone": "America/Halifax",
+    "device": "desktop",
+    "accountMode": "signed_out",
+    "guestPolicy": "no_login_v1",
+    "egressPolicy": "unverified"
+  },
+  "timeoutSeconds": 150,
+  "browserMode": "silent",
+  "captureScreenshot": false,
+  "verifiedCountry": null,
+  "geoVerificationNote": "Geography has not been independently verified."
+}

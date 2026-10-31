@@ -1,0 +1,101 @@
+[
+  {
+    "id": "@maxuod/answerpouch@0.1.0",
+    "name": "@maxuod/answerpouch",
+    "version": "0.1.0",
+    "size": 46872,
+    "unpackedSize": 159365,
+    "shasum": "7f76a00f47b31fb204d751b0fa620c4c2c832dd4",
+    "integrity": "sha512-ApZ+WRWxXvdj5M3vBwZwLPWQAm8BEHQdpns3jgthARV9PwuZ5HiBAcZBMfl2tSWurarfNvq8BmhZ0Sc8B9yxDg==",
+    "filename": "maxuod-answerpouch-0.1.0.tgz",
+    "files": [
+      {
+        "path": "NOTICE.md",
+        "size": 733,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 3577,
+        "mode": 420
+      },
+      {
+        "path": "bin/answerpouch.cjs",
+        "size": 3704,
+        "mode": 493
+      },
+      {
+        "path": "docs/protocol.md",
+        "size": 2198,
+        "mode": 420
+      },
+      {
+        "path": "index.cjs",
+        "size": 337,
+        "mode": 420
+      },
+      {
+        "path": "index.d.ts",
+        "size": 4060,
+        "mode": 420
+      },
+      {
+        "path": "lib/browser-environment.cjs",
+        "size": 597,
+        "mode": 420
+      },
+      {
+        "path": "lib/browser-extract.cjs",
+        "size": 52433,
+        "mode": 420
+      },
+      {
+        "path": "lib/browser-platforms.cjs",
+        "size": 21003,
+        "mode": 420
+      },
+      {
+        "path": "lib/capture-artifact.cjs",
+        "size": 686,
+        "mode": 420
+      },
+      {
+        "path": "lib/capture-schema.cjs",
+        "size": 4276,
+        "mode": 420
+      },
+      {
+        "path": "lib/chrome-collector.cjs",
+        "size": 49074,
+        "mode": 420
+      },
+      {
+        "path": "lib/egress-check.cjs",
+        "size": 1808,
+        "mode": 420
+      },
+      {
+        "path": "lib/platform-profiles.cjs",
+        "size": 8720,
+        "mode": 420
+      },
+      {
+        "path": "lib/protocol.cjs",
+        "size": 3053,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1480,
+        "mode": 420
+      },
+      {
+        "path": "source-provenance.json",
+        "size": 1626,
+        "mode": 420
+      }
+    ],
+    "entryCount": 17,
+    "bundled": []
+  }
+]

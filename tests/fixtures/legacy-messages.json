@@ -1,0 +1,10 @@
+{
+  "browserLogin.copilotMenuMissing": "Copilot's account menu is not recognized yet. Use Check login again to retry.",
+  "browserLogin.copilotMenuAmbiguous": "Copilot has several menu controls, and the login is not verified yet. Use Check login again to retry.",
+  "browserLogin.copilotAccountProofMissing": "getaudit could not verify an account in Copilot's menu yet. Use Check login again to retry.",
+  "browserLogin.copilotUnsupportedEntry": "The login window is not on a Copilot chat page. Return to Copilot, then return to getaudit for an automatic check.",
+  "browserLogin.copilotEntryChanged": "The Copilot page changed during the login check. Return to getaudit for another automatic check.",
+  "browserLogin.copilotM365MenuMissing": "Microsoft 365 Copilot's account menu is not recognized yet. Use Check login again to retry.",
+  "browserLogin.copilotM365MenuAmbiguous": "Microsoft 365 Copilot has several account menu controls, and the login is not verified yet. Use Check login again to retry.",
+  "browserLogin.copilotMenuCheckFailed": "Copilot's account check could not finish. Use Check login again to retry."
+}

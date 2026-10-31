@@ -1,0 +1,11 @@
+node_modules/
+*.tgz
+coverage/
+.private/
+artifacts/
+profiles/
+.env*
+*.db
+*.db-*
+*.enc
+.DS_Store

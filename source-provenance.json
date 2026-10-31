@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "extractedOn": "2026-10-30",
+  "sourceProduct": "getaudit",
+  "sourceBaseCommit": "c68ad14073e4aa15d60539fb4747490553881636",
+  "sourceState": "working copy including previously validated uncommitted collector changes; commit alone does not identify these bytes",
+  "modules": [
+    {
+      "source": "desktop/chrome-collector.cjs",
+      "target": "lib/chrome-collector.cjs",
+      "sha256": "8060864d6cca5e340ce1b246cabb8b03228b043c790042d693aa2daf4711dac3"
+    },
+    {
+      "source": "desktop/browser-platforms.cjs",
+      "target": "lib/browser-platforms.cjs",
+      "sha256": "348cebd323733ce3ae8722aa7a1e05a198d4109249694eaa40ebb086837a1bff"
+    },
+    {
+      "source": "desktop/browser-extract.cjs",
+      "target": "lib/browser-extract.cjs",
+      "sha256": "d095517b8aa7a259baaed142e7ed4bfd8e657f968f907aaffa38b21cda350389"
+    },
+    {
+      "source": "desktop/platform-profiles.cjs",
+      "target": "lib/platform-profiles.cjs",
+      "sha256": "d528a0814588ce5d3e8d259627ec68f4cf6d1872a7a19cb8bbaff88e4f502316"
+    },
+    {
+      "source": "desktop/browser-environment.cjs",
+      "target": "lib/browser-environment.cjs",
+      "sha256": "14799434c48dc725625f288e64ec1915abca3cb45b8e5d6571be752be83b1b12"
+    },
+    {
+      "source": "desktop/egress-check.cjs",
+      "target": "lib/egress-check.cjs",
+      "sha256": "2ebc43026521090abf7d23626506889cb5f866d6629776fd9ee01a6b721ea554"
+    },
+    {
+      "source": "desktop/capture-artifact.cjs",
+      "target": "lib/capture-artifact.cjs",
+      "sha256": "04703f79dde04d1cdbf6512cd9e8daee9eb97ba1d2bfc72f092d6528f585b580"
+    }
+  ]
+}

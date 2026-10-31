@@ -1,0 +1,12 @@
+
+> @maxuod/answerpouch@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Volumes/X9 Pro/Developer/maxuod/answerpouch
+
+
+ Test Files  7 passed (7)
+      Tests  203 passed | 1 skipped (204)
+   Start at  22:59:27
+   Duration  1.01s (transform 374ms, setup 0ms, import 718ms, tests 1.34s, environment 0ms)
