@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "packagedNativeUi": true,
+  "isolatedData": true,
+  "freshDownloadActionVisible": true,
+  "englishAndChinese": true,
+  "narrowWidth": 860,
+  "noHorizontalOverflow": true,
+  "explicitDownloadFailureHandled": true,
+  "automaticRetries": 0,
+  "existingOfficialRuntimeRecognized": true,
+  "workspaceBytesPreserved": true,
+  "realProviderRequests": 0,
+  "cleanMachineAcceptance": false
+}

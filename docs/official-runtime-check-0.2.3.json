@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "pinnedOfficialArchive": true,
+  "version": "153.0.8010.12",
+  "bytes": 190970181,
+  "sha256": "930e2a2c15addbaca1fe9b07bfa520667bced556d7988707186819cb4279ef3b",
+  "downloadedExecutableMatchesPreviouslyTested": true,
+  "launchEnvironmentKeys": [
+    "HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+  ],
+  "syntheticOnly": true,
+  "realProviderRequests": 0,
+  "vendorSignatureVerified": false,
+  "trustOrQuarantineChanged": false,
+  "cleanMachineAcceptance": false
+}

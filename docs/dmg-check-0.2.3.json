@@ -1,0 +1,13 @@
+{
+  "version": "0.2.3",
+  "imageVerify": true,
+  "readOnlyMount": true,
+  "manifestEntriesMatch": 280,
+  "strictSignatureVerified": true,
+  "applicationsShortcutVerified": true,
+  "installGuideEnglishAndChinese": true,
+  "browserBundled": false,
+  "notarized": false,
+  "cleanMachineAcceptance": false,
+  "sha256": "9c23951714cd10353311142f468b46597050173c44e06423c35cf216eb17c05e"
+}

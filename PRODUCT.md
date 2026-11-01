@@ -25,3 +25,7 @@ Version 0.2.0 implements this flow in Electron with its own pinned Chrome for Te
 Source tests and native synthetic acceptance are recorded in docs/. Local certificate signing and bundled-browser smoke have separate receipts. Local signing is not Developer ID, Apple notarization, clean-machine acceptance or a public customer download. Real sign-in/capture per platform and clean-Mac installation remain to be accepted. Do not claim Windows or Intel support.
 
 The free/open-source research-core direction is unchanged; extraction does not enact a new license or public release. Browser extensions and hosted model APIs remain alternatives with different permissions/evidence conditions; neither has been implemented as an equivalent replacement here.
+
+## Public beta delivery update · 2026-10-31
+
+The owner authorized an explicitly unnotarized public beta. Current application version is 0.2.3; prior local-candidate claims above are historical. The installer omits Chrome for Testing and its restricted components. One explicit Prepare browser action downloads the pinned official archive to the app data directory, verifies its size/SHA-256, and keeps vendor bytes/OS trust unchanged. No terminal, separate browser installation or developer key is needed. See docs/INSTALL.md and docs/beta-release-0.2.3.md. Public availability does not prove another clean Mac can open it or that all providers work.

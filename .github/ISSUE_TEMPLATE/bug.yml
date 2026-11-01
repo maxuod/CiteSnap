@@ -1,0 +1,38 @@
+name: Bug report / 问题反馈
+description: Report installation, account or evidence problems without private data.
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not upload profiles, cookies, passwords, tokens or unredacted customer exports. 不要上传账号资料或客户原始证据。'
+  - type: input
+    id: version
+    attributes:
+      label: AnswerPouch version / 软件版本
+      placeholder: 0.2.3 beta 1
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS version and chip / 系统与芯片
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected step / 出问题的步骤
+      options:
+        - Download or install / 下载安装
+        - Prepare browser / 准备浏览器
+        - Freeze or import / 冻结导入
+        - Own-account login / 登录账号
+        - Collect / 采集
+        - Evidence or export / 证据导出
+        - Other / 其他
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Actual and expected behavior / 实际与预期表现
+      description: Include platform, redacted message and reproduction steps with synthetic questions.
+    validations:
+      required: true

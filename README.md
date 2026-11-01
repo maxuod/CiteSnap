@@ -1,43 +1,79 @@
 # AnswerPouch · 答袋
 
-Collect original AI answers. Keep their source evidence.
+**Collect original AI answers. Keep their source evidence.**
 
-Independent local collector for SEO/GEO researchers, separated from getaudit. The 0.2.2 desktop candidate includes its own browser. Customers do not need Node.js, terminal commands, developer keys or JSON configuration. It starts empty, without a sample project.
+Free, open-source local AI answer and citation collection for SEO/GEO researchers. Freeze exact questions, use your own platform accounts, and retain inspectable evidence on your computer. Independent of the getaudit hosted website.
 
-## Customer flow
+**[Download Mac beta](https://github.com/maxuod/answerpouch/releases/tag/v0.2.3-beta.1)** · **[Install & first sign-in / 安装与首次登录](docs/INSTALL.md)** · [中文](#中文)
 
-1. Paste questions and **Freeze & save** the local file.
-2. **Import** the frozen file; exact wording/order and its hash are checked.
-3. Select sources, sign into **your own accounts**, acknowledge the request/account and local-network notices, then **Start collecting**. Inspect original answers/citations and **Export evidence**.
+## Download
 
-Adapters cover ChatGPT Search, Gemini, Copilot, Perplexity, Grok and Google AI Overview. Real access, sign-in, complete answers and citations depend on the platform. One owner's Copilot account, saved-session restoration, a real automatic answer/citation capture and native evidence export were checked on 2026-10-31. Other providers and independent customers remain unverified; see the [acceptance and limits](docs/copilot-native-read-fix-2026-10-31.md).
+| Build | Requirements | Status |
+| --- | --- | --- |
+| [0.2.3 beta 1 — DMG](https://github.com/maxuod/answerpouch/releases/download/v0.2.3-beta.1/AnswerPouch-0.2.3-mac-arm64-beta.dmg) | Apple Silicon (M1+), macOS 13+ | Public beta; no Apple Developer ID/notarization |
+| Intel Mac / Windows / Linux | — | No supported installer in this release |
 
-Frequent/large automated requests may trigger verification, rate limits, temporary restrictions or account suspension. Sequential requests, 45-second gaps and a conservative local daily guard do not establish safe usage. Restrictions stop the batch. Submitted-but-unknown tasks remain uncertain and never replay automatically. Repeated observations require a separate acknowledgement.
+Download the **DMG**, not the developer Source code ZIP. No Node.js, terminal, API key, GitHub account or getaudit account is needed. Starts empty. First use includes one explicit **Prepare browser** download (about 183 MB) directly from Google's official host, subject to Google's terms; the browser is not redistributed in our installer.
 
-Collection uses the computer's actual network and browser defaults. There is no country, proxy, timezone or location switch. UI language does not simulate location. A system VPN/proxy can affect the exit; physical location and network country are unverified.
+macOS may require individual approval in **System Settings → Privacy & Security → Open Anyway**. Only approve a source you trust and intended to install. Read the [installation messages and steps](docs/INSTALL.md) and [Apple's explanation](https://support.apple.com/en-us/102445). Another clean Mac's internet-download installation remains unverified. Signing/notarization is deferred; this beta does not promise frictionless installation.
 
-## Delivery
+## Use
 
-Local source/candidate only; no collector public repository/package, installer publication or deployment has occurred. Initial target: **Apple Silicon macOS 13 or newer**. A local certificate is not Developer ID or notarization. Official signing, Apple notarization, clean-Mac download acceptance and broader customer/platform acceptance remain before claiming a frictionless public release. Windows/Intel support is not claimed.
+1. **Freeze & save** exact local questions, one per line.
+2. **Import** the frozen file. Wording, order and SHA-256 are checked; import sends no questions.
+3. **Prepare browser** once, select sources and sign into **your own accounts** in dedicated windows. Return and wait for **Account confirmed**; use **Check** if needed.
+4. Review request counts and acknowledge account/network risks, then explicitly **Start collecting**.
+5. Inspect original answers, captured citation links, access/completeness conditions and hashes. **Export evidence** saves frozen questions, tasks and original capture records as JSON.
 
-The hosted [getaudit-web](https://github.com/maxuod/getaudit-web) project is private and separate. It cannot access local profiles. Existing installed getaudit 0.4.47 is untouched and its source remains pinned to the extracted 0.1.0 library; this desktop does not silently upgrade it.
+Orange/white UI, mouthless mascot, English default and Simplified Chinese. Sequential requests. Saved login is checked again; no automatic replay or paid API fallback.
 
-## Data and evidence
+## Platform validation
 
-The application stores questions/checkpoints/captures locally, with separate dedicated AI profiles. Import, saved evidence reading and UI language changes send no questions. This collector has no cloud upload. Questions are sent to the selected external platforms only when started. Opening a saved source link is an explicit action in the system browser.
+| Adapter | Real-account acceptance |
+| --- | --- |
+| Copilot | One owner's login/restoration, automatic answer/citation capture and native export checked on 2026-10-31; final parser compared with the same native conversation |
+| ChatGPT Search, Gemini, Perplexity, Grok, Google AI Overview | Adapters present; independent real-account collection not yet accepted |
 
-Original question text/order, answer text, citations, bounded artifacts, timestamps and observed account/access conditions retain hashes. An account-unverified observed capture is retained but excluded from confirmed observations. Exports can contain customer content; share within its authorization. A hash detects changed bytes relative to a trusted retained hash; it is not platform attestation. See [local formats](docs/local-format.md), [legacy protocol](docs/protocol.md), [current acceptance](docs/copilot-native-read-fix-2026-10-31.md) and the [historical 0.2.0 delivery](docs/desktop-delivery.md).
+The successful automatic Copilot record retained **2,745 characters and six citation URLs**. A first extraction failure remains preserved; its existing answer was recovered manually without resubmission. Version 0.2.3 changes browser delivery; earlier real evidence does not certify this version for every account/platform. See [acceptance details](docs/copilot-native-read-fix-2026-10-31.md), [changelog](CHANGELOG.md) and [beta verification](docs/beta-release-0.2.3.md).
 
-## Development
+Missing captures do not prove that an answer, mention or citation was absent. Hashes detect changes relative to a trusted retained hash, not platform attestation. Finished processing does not guarantee complete answers/citations.
 
-Requires Node.js 22.19+ for development only. Install locked dependencies, run npm test, npm run prepare-browser and npm run desktop. Native isolated synthetic acceptance: node scripts/verify-desktop.mjs. The packaged engine can be checked against fully intercepted synthetic pages with npm run verify-engine; this does not contact real providers or certify real account access. Packaging: npm run package-desktop, with a configured signing identity; an existing private owner build config may be supplied using --local-signing-config and an absolute path. Never commit signing secrets.
+## Account, location and privacy
 
-Packaging uses a strict source/dependency allowlist. The library retains compatibility exports and separately records historical 0.1.0 versus current 0.2.2 hashes in source-provenance.json. CLI live guest collection is disabled in 0.2; offline verification remains. Customer collection goes through the desktop's frozen-question, own-account and host-network gates.
+Frequent/large automated requests may trigger verification, rate limits, temporary restrictions or account suspension. **45-second gaps and the local 50-start/source/rolling-24-hour guard are not safe quotas.** Restrictions stop the batch. Submitted-but-unknown tasks stay uncertain and never automatically retry. Repeated observations need explicit acknowledgement.
+
+Uses the host computer's current network/browser defaults. No app country, proxy, IP, timezone or geolocation switch. OS VPN/proxy settings can affect the exit; physical location/network country remain unverified. Results/access can be region-limited.
+
+Questions, evidence and dedicated login profiles stay locally. Starting sends exact questions to selected external platforms; preparation contacts Google's download service; citation clicks contact the saved website. No AnswerPouch cloud uploader, analytics SDK or background collection. No copying personal Chrome/getaudit profiles. Browsers/platforms have their own network behavior. See [Privacy](PRIVACY.md) and [Security](SECURITY.md). Do not post cookies, keys, profiles or raw customer exports in Issues.
+
+## Open source and development
+
+[MIT licensed](LICENSE), continuing the upstream getaudit research-core license. Third-party packages, font, browser terms and branding have separate [notices](NOTICE.md). The hosted web project stays private and separate. Existing getaudit consumers remain pinned to extracted 0.1.0 until separately upgraded.
+
+Development needs Node.js 22.19+:
+
+```sh
+npm ci
+npm run check
+npm test
+npm run review:public
+# Apple Silicon Mac development:
+npm run prepare-browser
+npm run desktop
+```
+
+See [Contributing](CONTRIBUTING.md), [release procedure](docs/RELEASING.md), [evidence formats](docs/local-format.md), [legacy protocol](docs/protocol.md) and [source provenance](source-provenance.json). Package `private: true` prevents accidental npm publication; it does not make GitHub private. CLI live guest collection is disabled; customer collection uses desktop account/risk gates.
 
 ## 中文
 
-答袋：**冻结问题 → 导入 → 勾选来源并登录自己的账号 → 自动采集 → 查看/导出原始回答与引用**。用户无需安装 Node、敲命令或配置开发者账号。
+**答袋：冻结问题，用自己的账号采集 AI 原始回答，把引用和证据一起留在本机。**
 
-沿用橙白与无嘴小人，默认英文，可切换中文。只用本机当前网络，不提供地区/代理切换。请求过多可能触发验证、限流或封号，程序的请求间隔与每日限制不代表安全次数。中断或未确认结果不自动重发。
+**[下载测试版](https://github.com/maxuod/answerpouch/releases/tag/v0.2.3-beta.1)** · **[中文安装与首次登录](docs/INSTALL.md#中文安装与首次登录)**
 
-当前为 Apple Silicon Mac 本地测试版。已实测一位用户的 Copilot 账号恢复、真实回答/引用采集和证据导出；其他平台及独立客户仍需验收。Apple 正式分发签名/公证及干净机器安装验收尚待完成，不能称为已公开可用的正式下载。
+当前支持 **M1 及更新芯片的 Mac、macOS 13+**，未完成 Apple 正式签名、公证，安装时可能需在系统“隐私与安全性”里单独确认。另一台干净 Mac 的下载安装仍待验收。用户无需注册 getaudit、安装 Node、敲命令或填 API 密钥。首次点“准备采集浏览器”会从 Google 官方下载约 183 MB，不在我们的安装包里转发。
+
+**冻结并保存 → 导入 → 准备浏览器 → 勾选来源并登录自己的账号 → 确认风险 → 开始采集 → 查看、导出证据。** 保留橙白与无嘴小人，默认英文，可切中文。登录、导入、查看证据不自动提问。
+
+已实测一位用户的 Copilot 登录恢复、真实自动采集与导出；成功记录有 2,745 字符正文、6 个引用。其他平台虽有适配器，仍待真实验收；新版本浏览器准备流程与旧版实测分开记录。大量自动请求有验证、限流、封号风险，软件间隔和本地限制不是安全次数。只用本机当前网络，不提供地区／代理切换，访问受限即停止，不自动重发。
+
+源码免费开源（MIT），证据本地保存。分享导出前核对客户授权；反馈不要上传 Cookie、账号资料、密钥或未经脱敏的客户证据。

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Install and first sign-in / 安装与首次登录
+    url: https://github.com/maxuod/answerpouch/blob/main/docs/INSTALL.md
+    about: Read the beta installation and account steps.
+  - name: Private security report / 私密漏洞报告
+    url: https://github.com/maxuod/answerpouch/security/advisories/new
+    about: Do not disclose vulnerabilities or credentials publicly.

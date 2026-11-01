@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "nativeElectron": true,
+  "syntheticData": true,
+  "externalRendererRequests": 0,
+  "realProviderRequests": 0,
+  "checks": [
+    "fresh empty workspace",
+    "freeze original ordered questions",
+    "native file save and import",
+    "own-account start guard",
+    "no location selector",
+    "risk acknowledgements",
+    "English and Chinese",
+    "1180 and 860 pixel widths",
+    "long evidence and exact citation display",
+    "HTML text escaping",
+    "native evidence export",
+    "normal close"
+  ],
+  "screenshots": [
+    ".impeccable/review/desktop-empty-en.png",
+    ".impeccable/review/desktop-imported-zh.png",
+    ".impeccable/review/desktop-compact-zh.png",
+    ".impeccable/review/desktop-evidence-zh.png",
+    ".impeccable/review/desktop-evidence-compact-zh.png",
+    ".impeccable/review/desktop-evidence-en.png"
+  ]
+}
