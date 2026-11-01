@@ -1,0 +1,14 @@
+{
+  "acceptedVersion": "0.2.4",
+  "removed": [
+    "AnswerPouch-0.2.3-mac-arm64-beta.dmg",
+    "AnswerPouch-Install.md"
+  ],
+  "kept": [
+    "old 0.2.3 bundle: boundary or process check did not pass"
+  ],
+  "currentAppAndDmgRetained": true,
+  "inUseOlderBundlesUntouched": true,
+  "historicalReceiptsAndPublicOldReleaseRetained": true,
+  "userDataAndProfilesUntouched": true
+}

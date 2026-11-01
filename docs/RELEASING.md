@@ -11,3 +11,5 @@ The owner authorized a public beta with Developer ID/notarization deferred. Labe
 7. Record URLs, source commit/tag, app version, checksum and validation scope. Clean-Mac installation and Apple-notarized delivery remain separate future acceptance tasks, not prerequisites for this explicitly unnotarized beta.
 
 CI is source-only, read-only-token and does not sign or upload binaries automatically.
+
+For the opt-in native rename upgrade check, `scripts/verify-rename-upgrade.mjs` needs the archived 0.2.3 app staged at `out/0.2.3/AnswerPouch-darwin-arm64/AnswerPouch.app` and the current CiteSnap candidate. It uses synthetic, isolated data only. Old generated bundles are removed after acceptance; restore/rebuild that fixture from the archived release/source when repeating the check, then clean it up. Never substitute a user's installed app/profile.

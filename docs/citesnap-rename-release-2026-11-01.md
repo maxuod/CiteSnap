@@ -22,3 +22,9 @@ Installer: `CiteSnap-0.2.4-mac-arm64-beta.dmg` · 137,760,112 bytes · SHA-256 `
 [Release](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.4-beta.1) · [upgrade receipt](rename-upgrade-check-0.2.4.json) · [package](packaged-check-0.2.4.json) · [first use](beta-ui-check-0.2.4.json) · [DMG](dmg-check-0.2.4.json).
 
 Developer ID signing/notarization remain deferred by the owner. The strict notarized-release check still reports developer_id_and_hardened_runtime_required and is not claimed as passed. Another clean Mac's internet-download installation, real owner login restoration and broader real-platform/account acceptance remain unverified. The release is a public beta; prior Copilot evidence retains its original version scope. Publication and anonymous-download checks are recorded after upload.
+
+## Published
+
+Published the pre-release on 2026-11-01 at 03:55:43 UTC from source commit `470f07e02eb74f15b909e5286523a1601eb69c87`. The unauthenticated complete download matches 137,760,112 bytes and SHA-256 `23af6ba0263da0edeb2e9888eaac3dac9db5620e6a07fe679088313516f1a922`. The installation attachment matches the source. Release CI passed, repository history is preserved and the old web URL returns 301 to CiteSnap. See [publication receipt](publication-0.2.4.json).
+
+After acceptance, the closed generated 0.2.3 app, its old DMG and install attachment were removed after version/process/hash boundary checks. The current CiteSnap bundle/image, in-use older bundle, historical receipts, public old release and all user data remain. See [retention receipt](local-artifact-retention-0.2.4.json).
