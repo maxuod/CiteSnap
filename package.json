@@ -1,6 +1,6 @@
 {
   "name": "@maxuod/citesnap",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "description": "Free GEO/AEO software to check AI mentions of companies, websites and products.",
   "type": "commonjs",

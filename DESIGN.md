@@ -1,5 +1,5 @@
 ---
-name: AnswerPouch desktop
+name: CiteSnap desktop
 description: Warm local workspaces for questions, account readiness and original AI evidence.
 colors:
   primary: "#c74818"
@@ -167,13 +167,13 @@ components:
     typography: "{typography.status}"
 ---
 
-# Design System: AnswerPouch desktop
+# Design System: CiteSnap desktop
 
 ## Overview
 
 **Creative North Star: "A warm local evidence workspace"**
 
-This is a descriptive name for the accepted implementation, not a new visual-world proposal. AnswerPouch inherits the approved warm orange/white world: an owned mouthless mascot, weighty Bricolage brand lettering, warm paper and white work surfaces. Its personality is lightly playful in the identity and restrained in the working content. The system remains a desktop workspace with generous separation between task groups, compact source rows and dense evidence when there is evidence to read.
+This is a descriptive name for the accepted implementation, not a new visual-world proposal. CiteSnap uses the approved warm orange/white palette: an owned mouthless mascot, weighty Bricolage brand lettering, warm paper and white work surfaces. Its personality is lightly playful in the identity and restrained in the working content. The system remains a desktop workspace with generous separation between task groups, compact source rows and dense evidence when there is evidence to read.
 
 The visual hierarchy makes the current action and its state legible. Borders, surface tone, readable labels and explicit status text do the work; color alone does not establish readiness or completion. Original answers keep a reading voice rather than becoming code blocks or promotional summaries. English and Chinese share the same structure, with system fonts carrying working text and Chinese glyphs.
 

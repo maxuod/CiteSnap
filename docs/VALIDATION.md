@@ -1,6 +1,6 @@
 # Beta validation
 
-The earlier download was AnswerPouch 0.2.3 beta 1, published on 2026-11-01. CiteSnap 0.2.4 continues the same frozen-question and evidence formats. The observations below retain their original version scope.
+The observations below retain their original version scope. Tests using synthetic data are distinguished from real-platform observations.
 
 ## Real Copilot observations
 
@@ -23,9 +23,7 @@ The official browser archive's fixed size and SHA-256 were verified, followed by
 
 The DMG was verified and mounted read-only to check the app, local signature, Applications shortcut, installation guide and notices. A complete unauthenticated download from the public release matched the published hash. Release CI passed.
 
-Installer: AnswerPouch-0.2.3-mac-arm64-beta.dmg
-
-SHA-256: `9c23951714cd10353311142f468b46597050173c44e06423c35cf216eb17c05e`
+0.2.3 installer SHA-256: `9c23951714cd10353311142f468b46597050173c44e06423c35cf216eb17c05e`
 
 See the [publication receipt](https://github.com/maxuod/CiteSnap/blob/main/docs/publication-0.2.3.json) and [0.2.3 check record](https://github.com/maxuod/CiteSnap/blob/main/docs/beta-release-0.2.3.md). The earlier real Copilot observations are separate from these delivery tests.
 
@@ -37,7 +35,7 @@ Captured content can be incomplete. A processing-complete status does not guaran
 
 ## 中文核对说明
 
-旧版 AnswerPouch 0.2.3 beta 1 于 2026-11-01 发布。CiteSnap 0.2.4 延续原冻结问题与证据格式，以下记录保留原始版本和验收范围。
+以下记录保留原始版本和验收范围，并区分模拟测试与真实平台观测。
 
 真实平台部分，只验收过一位用户的 Copilot。两个不同问题各发送一次：第一个在 0.2.0 提取超时，之后从原对话只读恢复了 3,835 字符和 21 个引用网址，引用完整性未确认；第二个在 0.2.1 自动采集成功，保存了 2,745 字符和 6 个引用，6 个网址当时均返回 HTTP 200。0.2.2 最终解析器与第二段原对话核对，正文、网址集合哈希和 6 张原生引用卡片一致，未再提问。旧记录保持原样。
 
@@ -45,9 +43,9 @@ Captured content can be incomplete. A processing-complete status does not guaran
 
 这不等于新版本已通过所有真实账号的完整验收。另一台干净 Mac 的下载后安装、其他五个平台的真实账号采集仍待验证，Apple 正式签名与公证也尚未完成。回答、引用是否完整，仍需按每次记录的状态判断。
 
-## CiteSnap 0.2.4 rename checks · 2026-11-01
+## 0.2.4 validation · 2026-11-01
 
-The visible application, package and current download are CiteSnap. The source suite passed 239 tests with one existing opt-in skip across 11 files. The signed local candidate matched 280 bundle entries and 32 checked source/assets. Its Info.plist reports CiteSnap / 0.2.4; the compatibility bundle identifier remains unchanged.
+The source suite passed 239 tests with one existing opt-in skip across 11 files. The signed local candidate matched 280 bundle entries and 32 checked source/assets. Its Info.plist reports CiteSnap / 0.2.4; the compatibility bundle identifier remains unchanged.
 
 An isolated native cross-version check opened synthetic 0.2.3 records in 0.2.4. It retained Chinese, the frozen question hash, workspace/evidence bytes and the synthetic profile marker. The existing run export matched the old JSON, while the new default export filename began with CiteSnap. The test made no new real-platform request and did not verify the owner's actual login restoration. Default legacy data-path selection, explicit user-data overrides and rejection of linked roots also have focused tests.
 
@@ -57,6 +55,6 @@ See [upgrade receipt](rename-upgrade-check-0.2.4.json), [package receipt](packag
 
 ### 中文补充
 
-0.2.4 的当前应用和下载名为 CiteSnap。239 项测试通过，另有一项原有可选跳过，共 11 个测试文件。隔离的原生升级检查保留了旧版合成数据的中文偏好、冻结问题哈希、工作区与证据文件、合成资料标记，旧任务导出内容与原 JSON 一致，新导出文件名使用 CiteSnap。没有新发真实平台问题，也没有把合成资料检查说成用户真实登录恢复。
+0.2.4 通过 239 项测试，另有一项原有可选跳过，共 11 个测试文件。隔离的原生升级检查保留了旧版合成数据的中文偏好、冻结问题哈希、工作区与证据文件、合成资料标记，旧任务导出内容与原 JSON 一致，新导出文件名使用 CiteSnap。没有新发真实平台问题，也没有把合成资料检查说成用户真实登录恢复。
 
 旧版真实 Copilot 记录仍保留原版本范围。其他电脑的安装、其他真实账号及平台行为尚待验证，Apple 正式签名和公证继续留待后续。

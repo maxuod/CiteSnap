@@ -2,14 +2,14 @@
 
 [中文安装与首次登录](#中文安装与首次登录)
 
-These instructions apply to CiteSnap 0.2.4 beta. Upgrading keeps the earlier AnswerPouch data directory and saved evidence in place.
+These instructions apply to CiteSnap 0.2.5 beta.
 
 ## Install on a Mac
 
 You need an Apple Silicon Mac (M1 or newer), macOS 13+, an internet connection and your own account for the platform you want to use. Allow roughly 1.5 GB of free space for the application, browser preparation and evidence. This release has no Intel Mac, Windows or Linux installer.
 
-1. Open the [beta release page](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.4-beta.1) and download CiteSnap-0.2.4-mac-arm64-beta.dmg. GitHub's Source code ZIP is for developers.
-2. If AnswerPouch or CiteSnap is running, quit it normally before opening the update. Open the DMG, drag CiteSnap into Applications and eject the image. Launch the copy in Applications. Keep the existing application data folder in place.
+1. Open the [beta release page](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1) and download CiteSnap-0.2.5-mac-arm64-beta.dmg. GitHub's Source code ZIP is for developers.
+2. If CiteSnap is already running, quit it normally before replacing the app. Open the DMG, drag CiteSnap into Applications and eject the image. Launch the copy in Applications.
 3. The beta has a local build signature, without Apple Developer ID signing or notarization. You may see a message that the developer cannot be verified or Apple cannot check the app for malicious software.
 4. If you trust the source and intended to install it, first attempt to open the app, then go to System Settings → Privacy & Security → Open Anyway and confirm Open. Complete any device password or Touch ID request yourself. [Apple explains this process here](https://support.apple.com/en-us/102445). Wording and availability depend on macOS and any organization policy.
 
@@ -45,14 +45,14 @@ The [README](../README.md#accounts-network-and-evidence) covers account frequenc
 
 ## 中文安装与首次登录
 
-下列步骤对应 CiteSnap 0.2.4 测试版。升级继续使用原 AnswerPouch 数据目录，保留已有问题、证据和登录资料。
+下列步骤对应 CiteSnap 0.2.5 测试版。
 
 ### 安装
 
 需要 M1 及更新芯片的 Mac、macOS 13+、网络和自己的平台账号。建议预留约 1.5 GB 空间，供应用、浏览器准备和证据使用。本次没有 Intel Mac、Windows 或 Linux 安装包。
 
-1. 到[测试版发布页](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.4-beta.1)下载 CiteSnap-0.2.4-mac-arm64-beta.dmg。Source code 是开发者源码，普通使用请选 DMG。
-2. 升级前先正常退出旧版 AnswerPouch 或已运行的 CiteSnap。打开镜像，把 CiteSnap 拖入 Applications（应用程序），推出镜像，再从应用程序打开。保留原有应用数据目录。
+1. 到[测试版发布页](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1)下载 CiteSnap-0.2.5-mac-arm64-beta.dmg。Source code 是开发者源码，普通使用请选 DMG。
+2. 如果 CiteSnap 正在运行，替换应用前请先正常退出。打开镜像，把 CiteSnap 拖入 Applications（应用程序），推出镜像，再从应用程序打开。
 3. 本包只有本地构建签名，未完成 Apple Developer ID 正式签名和公证，可能出现“无法验证开发者”或“Apple 无法检查是否包含恶意软件”的提示。
 4. 确认来源可信且确实要安装时，先尝试打开一次，再到系统设置 → 隐私与安全性 → 仍要打开／强制打开（Open Anyway），在后续提示中确认打开。本机密码或 Touch ID 由你自己完成。[Apple 官方说明](https://support.apple.com/zh-cn/102445)介绍了这个过程，具体入口受系统版本和组织策略影响。
 

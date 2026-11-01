@@ -6,15 +6,15 @@ CiteSnap is free script-based software for GEO/AEO optimization. Import a frozen
 
 Use the same questions to examine mentions of a target company, website or product alongside competing alternatives. Reviewing what gets mentioned and which pages are cited can reveal gaps to address in your content and GEO/AEO work, with the aim of gaining more mentions than competitors.
 
-[Download the Mac beta](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.4-beta.1) · [Install and sign in](docs/INSTALL.md) · [简体中文](#中文)
+[Download the Mac beta](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1) · [Install and sign in](docs/INSTALL.md) · [简体中文](#中文)
 
 ## Try the beta
 
-The current build is **CiteSnap 0.2.4 beta**. Quit the earlier app normally before opening the update. Upgrades keep the existing AnswerPouch data directory so saved questions, evidence and dedicated profiles remain in place.
+The current build is **CiteSnap 0.2.5 beta**. Questions, evidence and dedicated login profiles are stored on your computer.
 
 | Build | Requirements | Status |
 | --- | --- | --- |
-| [0.2.4 beta 1 — DMG](https://github.com/maxuod/CiteSnap/releases/download/v0.2.4-beta.1/CiteSnap-0.2.4-mac-arm64-beta.dmg) | Apple Silicon (M1+), macOS 13+ | Public beta; no Apple Developer ID/notarization |
+| [0.2.5 beta 1 — DMG](https://github.com/maxuod/CiteSnap/releases/download/v0.2.5-beta.1/CiteSnap-0.2.5-mac-arm64-beta.dmg) | Apple Silicon (M1+), macOS 13+ | Public beta; no Apple Developer ID/notarization |
 | Intel Mac / Windows / Linux | — | No supported installer in this release |
 
 It runs on Apple Silicon Macs (M1 or newer) with macOS 13+. Intel Mac, Windows and Linux installers are not available. Download the DMG from the release page and drag the app into Applications.
@@ -46,7 +46,7 @@ Mention assessment and competitor comparison currently depend on reviewing the s
 
 One earlier Copilot capture retained 2,745 characters and six citation URLs. The final parser was checked against the same conversation. A separate extraction failure was retained and recovered manually without resending the question.
 
-The 0.2.3 browser preparation and export checks used local or intercepted test pages. These checks do not establish that every platform or account works. The [validation record](docs/VALIDATION.md) brings together the [Copilot observations](docs/copilot-native-read-fix-2026-10-31.md) and [0.2.3 delivery checks](docs/beta-release-0.2.3.md).
+The browser preparation and export checks used local or intercepted test pages. These checks do not establish that every platform or account works. See the [validation record](docs/VALIDATION.md) for the observations and their version scope.
 
 ## Accounts, network and evidence
 

@@ -6,7 +6,7 @@ The workflow starts with a frozen question set. After importing it, you sign int
 
 The answers provide material for checking where the target company, website or product appears, how competitors are described and which pages AI platforms cite. Reviewing those differences can help you decide what content to improve and where to compete for more mentions. Assessing target mentions currently relies on reviewing the captured answers; results belong to the accounts and conditions recorded for that observation.
 
-CiteSnap separates collection from getaudit's hosted analysis. The software is free under the MIT license. Platform access remains subject to each service's terms, availability and account restrictions. CiteSnap was previously named AnswerPouch and keeps its existing local data directory; see the [beta validation](docs/VALIDATION.md) and [installation guide](docs/INSTALL.md).
+CiteSnap separates collection from getaudit's hosted analysis. The software is free under the MIT license. Platform access remains subject to each service's terms, availability and account restrictions. See the [beta validation](docs/VALIDATION.md) and [installation guide](docs/INSTALL.md).
 
 ## 关于 CiteSnap
 
@@ -16,4 +16,4 @@ CiteSnap 是一款免费的 GEO/AEO 查询脚本软件，可查看公司、网�
 
 这些对照用于发现内容与提及上的差距，帮助你决定下一步优化什么，争取获得比竞品更多的提及。当前需要基于回答复核目标与竞品的情况；结果仍受平台、账号、时间和网络环境影响。
 
-软件按 MIT 许可证开放源码，采集与 getaudit 的托管分析分开运行。各平台的使用条件和账号限制继续适用。CiteSnap 原名 AnswerPouch，升级保留原有本地数据目录。已完成的检查见[测试记录](docs/VALIDATION.md)，操作步骤见[安装指南](docs/INSTALL.md#中文安装与首次登录)。
+软件按 MIT 许可证开放源码，采集与 getaudit 的托管分析分开运行。各平台的使用条件和账号限制继续适用。已完成的检查见[测试记录](docs/VALIDATION.md)，操作步骤见[安装指南](docs/INSTALL.md#中文安装与首次登录)。

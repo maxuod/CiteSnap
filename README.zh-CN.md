@@ -6,11 +6,11 @@ CiteSnap 是一款面向 GEO/AEO 优化的脚本软件。导入冻结的问题�
 
 用同一组问题对照目标与竞品，查看提及情况和引用来源。你可以据此发现内容与提及上的差距，调整 GEO/AEO 优化方向，争取在 AI 回答中获得比竞品更多的提及。
 
-[下载 Mac 测试版](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.4-beta.1) · [安装与首次登录](docs/INSTALL.md#中文安装与首次登录) · [English](README.md)
+[下载 Mac 测试版](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1) · [安装与首次登录](docs/INSTALL.md#中文安装与首次登录) · [English](README.md)
 
 ## 先试一次采集
 
-当前下载为 **CiteSnap 0.2.4 测试版**。升级前先正常退出旧版应用。新版继续使用原来的 AnswerPouch 数据目录，保留已有问题、证据和独立登录资料。
+当前下载为 **CiteSnap 0.2.5 测试版**。问题、证据和独立登录资料保存在你的电脑上。
 
 测试版适用于 M1 及更新芯片的 Mac，系统需 macOS 13 或以上。Intel Mac、Windows 和 Linux 暂无安装包。下载 DMG 后，将应用拖入 Applications（应用程序）。
 
