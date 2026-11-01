@@ -1,0 +1,48 @@
+{
+  "product": "AnswerPouch",
+  "applicationVersion": "0.2.3",
+  "tag": "v0.2.3-beta.1",
+  "sourceCommit": "a898ef4ad2f64951896fd64bef929b1faa3f678d",
+  "repository": "https://github.com/maxuod/answerpouch",
+  "repositoryVisibility": "public",
+  "release": "https://github.com/maxuod/answerpouch/releases/tag/v0.2.3-beta.1",
+  "publishedAt": "2026-11-01T03:09:40Z",
+  "draft": false,
+  "preRelease": true,
+  "stableLatestRelease": false,
+  "installer": "AnswerPouch-0.2.3-mac-arm64-beta.dmg",
+  "installerBytes": 137763569,
+  "sha256": "9c23951714cd10353311142f468b46597050173c44e06423c35cf216eb17c05e",
+  "githubAssetDigestMatched": true,
+  "unauthenticatedFullDownloadVerified": true,
+  "publicInstallGuideMatchesSource": true,
+  "ci": {
+    "url": "https://github.com/maxuod/answerpouch/actions/runs/41267898848",
+    "conclusion": "success",
+    "testsPassed": 233,
+    "optInSkip": 1
+  },
+  "sourceSecretsAudit": {
+    "commits": 5,
+    "currentTreeBytes": 6363657,
+    "genuineCredentialsDetected": 0,
+    "scope": "redacted Gitleaks history and current tracked snapshot; not a guarantee of universal absence"
+  },
+  "repositorySetup": {
+    "mitLicense": true,
+    "bilingualReadmeAndInstallGuide": true,
+    "privacySecurityContributing": true,
+    "issueAndPullRequestTemplates": true,
+    "readOnlyCiPermissions": true,
+    "secretScanning": true,
+    "pushProtection": true,
+    "privateVulnerabilityReporting": true,
+    "dependabot": true
+  },
+  "hostedWebRepositoryVisibility": "private",
+  "developerId": false,
+  "notarized": false,
+  "cleanMachineInstallationAccepted": false,
+  "browserBundled": false,
+  "newRealProviderSubmissions": 0
+}

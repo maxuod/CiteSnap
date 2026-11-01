@@ -25,3 +25,7 @@ The owner authorized a public test download with Apple Developer ID/notarization
 Machine-readable receipts: [package](packaged-check-0.2.3.json), [official runtime](official-runtime-check-0.2.3.json), [native UI](beta-ui-check-0.2.3.json), [collection engine](collection-engine-check-0.2.3.json), [DMG](dmg-check-0.2.3.json). Synthetic screenshots under `docs/qa/0.2.3/` contain no customer evidence.
 
 Publication verification is recorded separately after the pre-release assets are made public. Broader real-account validation, independent customer acceptance, Developer ID and notarization remain future work; they do not block this explicitly unnotarized beta.
+
+## Published and downloaded
+
+Published the pre-release on 2026-11-01 at 03:09:40 UTC from source commit `a898ef4ad2f64951896fd64bef929b1faa3f678d`. The public, unauthenticated complete installer download matches all 137,763,569 bytes and its SHA-256; the install attachment matches the source guide. Release CI passed. GitHub marks it pre-release, not draft or latest stable. The hosted website repository remains private. See [publication receipt](publication-0.2.3.json). These checks establish public download availability, not another Mac's installation acceptance.
