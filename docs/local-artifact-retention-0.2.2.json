@@ -1,0 +1,14 @@
+{
+  "currentVersion": "0.2.2",
+  "removedClosedOlderGeneratedBuilds": [
+    "out/.previous-0.2.0",
+    "out/.previous-0.2.1"
+  ],
+  "removedOlderLocalTestImages": [
+    "out/AnswerPouch-0.2.0-mac-arm64-local-test.dmg",
+    "out/AnswerPouch-0.2.1-mac-arm64-local-test.dmg"
+  ],
+  "currentAppAndImageRetained": true,
+  "sourceAndEvidenceReceiptsRetained": true,
+  "userDataOrProfilesTouched": false
+}

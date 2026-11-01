@@ -1,6 +1,6 @@
 {
   "name": "@maxuod/answerpouch",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "private": true,
   "description": "Local AI answer and citation collection, with portable source evidence.",
   "type": "commonjs",

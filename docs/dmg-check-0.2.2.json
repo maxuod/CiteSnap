@@ -1,0 +1,11 @@
+{
+  "version": "0.2.2",
+  "imageVerify": true,
+  "readOnlyMount": true,
+  "manifestEntriesMatch": 642,
+  "strictSignatureVerified": true,
+  "applicationsShortcutVerified": true,
+  "fileSha256": "10e59f735448c18d26555c6c425002d56c294e6d6805e5b249e440d14d8204c2",
+  "notarized": false,
+  "cleanMachineAcceptance": false
+}

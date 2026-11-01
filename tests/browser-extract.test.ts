@@ -9,6 +9,55 @@ function extract(html: string, surface = "chatgpt_search", question?: string, ba
   window.getComputedStyle = (el: Element) => ({ display: el.getAttribute("style")?.includes("display:none") ? "none" : "block", visibility: "visible", position: /(?:^|;)\s*position\s*:\s*fixed/.test(el.getAttribute('style')||'')?'fixed':'static' } as CSSStyleDeclaration);
   return extractVisiblePage({ document, surface, question });
 }
+describe('current Copilot personal-account reply structure — synthetic content',()=>{
+  const grouped=JSON.stringify([{url:'https://source.example/scheduling?utm_source=copilot',name:'source.example'},{url:'https://other.example/review',name:'other.example'}]);
+  const reply=(content='<p>A finished scheduling answer with public supporting sources.</p>',actions='<button aria-label="Copy Response">Copy Response</button>')=>
+    `<div data-testid="copilot-message-div"><div data-testid="copilot-message-reply-div"><div role="article" class="fai-CopilotMessage"><h6>Copilot said:</h6><div class="fai-CopilotMessage__content"><div data-testid="markdown-reply">${content}</div></div><div role="toolbar">${actions}</div></div></div></div>`;
+  it('reads the current native body and grouped citation destinations without source-control labels',()=>{
+    const s=extract(`<nav><div data-testid="markdown-reply">Sidebar text</div></nav><main><div data-role="user">The frozen question</div>${reply(`<p>A finished scheduling answer with public supporting sources.<button data-grouped-citations='${grouped}'>Source +1</button></p>`)}</main>`,'bing_copilot',undefined,'https://copilot.com/chat');
+    expect(s).toMatchObject({containerFound:true,responseComplete:true,generating:false,sourcePanel:false,unresolvedCitations:0});
+    expect(s.answer).toBe('A finished scheduling answer with public supporting sources.');
+    expect(s.citations).toEqual([{url:'https://source.example/scheduling',title:'source.example',placement:'answer_link'},{url:'https://other.example/review',title:'other.example',placement:'answer_link'}]);
+  });
+  it('does not borrow completion controls from another reply or the global page',()=>{
+    const s=extract(reply()+reply('<p>The current answer is still being prepared.</p>','')+'<button>Copy Response</button>','bing_copilot');
+    expect(s.answer).toBe('The current answer is still being prepared.');expect(s.responseComplete).toBe(false);
+    expect(extract(reply('<p>Streaming scheduling details.</p>','<button>Copy Response</button><button>Stop</button>'),'bing_copilot').responseComplete).toBe(false);
+    expect(extract('<div data-testid="copilot-message-div"><h6>Copilot said:</h6><button>Copy Response</button></div>','bing_copilot').containerFound).toBe(false);
+  });
+  it('preserves word boundaries between table cells in captured answer text',()=>{
+    const s=extract(reply('<table><tr><th>Plan</th><th>Price</th></tr><tr><td>Starter</td><td>Check current pricing</td></tr></table>'),'bing_copilot');
+    expect(s.answer).toContain('Plan Price');expect(s.answer).toContain('Starter Check current pricing');
+  });
+  it('never reads sidebar, user-message or hidden citation metadata, and fails closed on invalid groups',()=>{
+    const content=`<p>Visible reply.</p><button hidden data-grouped-citations='${grouped}'>Hidden</button><button data-grouped-citations='not-json'>Broken</button><button data-grouped-citations='[{"url":"javascript:alert(1)"},{"url":"/relative"}]'>Unsafe</button>`;
+    const s=extract(`<aside>${reply()}</aside><div data-message-author-role="user">${reply()}</div>${reply(content)}`,'bing_copilot');
+    expect(s.answer).toBe('Visible reply.');expect(s.citations).toEqual([]);expect(s.unresolvedCitations).toBe(3);
+    expect(extract(`<aside>${reply()}</aside><div data-message-author-role="user">${reply()}</div>`,'bing_copilot').containerFound).toBe(false);
+  });
+  it('does not accept sign-out text inside the new answer body as account proof',()=>{
+    const s=extract(reply('<p>Account documentation.</p><div role="menu"><button>Sign out</button></div>'),'bing_copilot',undefined,'https://copilot.com/chat');
+    expect(s.signedIn).toBe(false);expect(s.copilotAccountMenuSignedIn).toBe(false);
+  });
+  it('never mistakes an authored Sources heading or nested list for a native source panel',()=>{
+    const s=extract(reply(`<div><h3>Sources</h3><a href="https://source.example/a">Authored source</a><aside aria-label="Sources"><a href="https://source.example/b">Also authored</a></aside></div>`),'bing_copilot');
+    expect(s.sourcePanel).toBe(false);expect(s.citations.every((c:{placement:string})=>c.placement==='answer_link')).toBe(true);
+  });
+  it('matches current native grouped URLs to the References Citations list, excluding More cards',async()=>{
+    const native=`<div data-testid="search-widget-drawer-test-id"><button role="tab" id="sources-references-tab" aria-selected="true">References</button><div role="tabpanel" id="sources-references-panel" aria-labelledby="sources-references-tab"><div>Citations</div><div role="list"><div data-testid="references-search-widget-item" role="link">Source A</div><div data-testid="references-search-widget-item" role="link">Source B</div></div><div>More</div><div role="list"><div data-testid="references-search-widget-item" role="link">Extra unquoted search result</div></div></div></div>`;
+    const html=reply(`<p>Finished reply.<button data-grouped-citations='${grouped}'>Source +1</button></p>`)+native;
+    const s=extract(html,'bing_copilot');
+    expect(s).toMatchObject({sourcePanel:true,copilotReferenceCount:2,copilotGroupedCitationCount:2});
+    expect(extract(html.replace('<div>Citations</div>','<div>More</div>'),'bing_copilot').sourcePanel).toBe(false);
+    expect(s.citations).toHaveLength(2);expect(s.citations.every((c:{placement:string})=>c.placement==='answer_link')).toBe(true);
+    const control={isVisible:async()=>true,getAttribute:async()=>null,innerText:async()=>'Sources',click:async()=>{}};
+    const collect=(snapshot:unknown)=>collectNewSurfaceSources('bing_copilot',{page:{getByRole:()=>({all:async()=>[control]})},inspect:async()=>snapshot,wait:async()=>{},check:()=>{}});
+    expect((await collect(s)).citationsComplete).toBe(true);
+    expect((await collect({...s,copilotReferenceCount:3})).citationsComplete).toBe(false);
+    expect((await collect({...s,unresolvedCitations:1})).citationsComplete).toBe(false);
+    expect((await collect({...s,copilotReferenceCount:101,copilotGroupedCitationCount:101})).citationsComplete).toBe(false);
+  });
+});
 describe("visible answer and citation boundaries", () => {
   it('reads Gemini inline citation dialogs without mixing source cards into the answer',()=>{
     const s=extract(`<button>Sign in</button><model-response><message-content><div class="markdown" id="model-response-message-content-test"><p>A completed answer for restaurant tip pools.</p><div class="source-inline-chip-container"><button aria-expanded="true" aria-label="View source details for citation from source.example. Press Enter to open sources dialog.">Source</button><div role="dialog"><inline-source-card><a href="https://source.example/tips#fragment">Actual source title and preview</a></inline-source-card></div></div></div></message-content><action-bar-buttons><copy-button><button aria-label="Copy">Copy</button></copy-button></action-bar-buttons></model-response>`,'gemini');

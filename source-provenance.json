@@ -42,20 +42,20 @@
     }
   ],
   "runtimeRevision": {
-    "version": "0.2.0",
-    "reason": "Local desktop workflow, configurable bundled browser executable and host environment without locale/timezone overrides",
+    "version": "0.2.2",
+    "reason": "Native Copilot assistant body and grouped URLs, with References citation-card coverage and exclusion of authored Sources headings",
     "modules": [
       {
         "target": "lib/chrome-collector.cjs",
-        "sha256": "34f8362bdd5bde55e62e14415d54f266e923fa9cc9352aa3b54021da2c8abddd"
+        "sha256": "41b28fa5733e7a9dea3ffd52d6a7b6e3fee46c36ee0369cbe6e52572b339220d"
       },
       {
         "target": "lib/browser-platforms.cjs",
-        "sha256": "348cebd323733ce3ae8722aa7a1e05a198d4109249694eaa40ebb086837a1bff"
+        "sha256": "205a828634aadd4bad4cd0f9e50fe5fbe8b16df080715dbc41635d346cc42213"
       },
       {
         "target": "lib/browser-extract.cjs",
-        "sha256": "d095517b8aa7a259baaed142e7ed4bfd8e657f968f907aaffa38b21cda350389"
+        "sha256": "8a043c3ce3137540b853d8abd65b08055f1aba31c0c3e4223d277e297013c772"
       },
       {
         "target": "lib/platform-profiles.cjs",

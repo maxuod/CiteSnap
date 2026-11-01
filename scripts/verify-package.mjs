@@ -12,7 +12,8 @@ import {assertPortableTree} from './package-files.mjs';
 const require=createRequire(import.meta.url),{_electron,chromium}=require('playwright-core');
 const {createBrowserEnvironment}=require('../lib/browser-environment.cjs');
 const candidate=join(root,'out/AnswerPouch-darwin-arm64/AnswerPouch.app');
-const receipt=JSON.parse(readFileSync(join(root,'out/AnswerPouch-0.2.0-build.json'),'utf8'));
+const version=JSON.parse(readFileSync(join(root,'package.json'),'utf8')).version;
+const receipt=JSON.parse(readFileSync(join(root,'out/AnswerPouch-'+version+'-build.json'),'utf8'));
 const artifactsOnly=process.argv.includes('--artifacts-only');
 const qa=mkdtempSync(join(tmpdir(),'answerpouch-package-qa-'));let app,context,server;let parity=0;
 try{
@@ -42,5 +43,5 @@ try{
   await context.close();context=null;
  }
  const result={passed:true,manifestEntries:receipt.files.length,sourceFilesMatch:parity,packagedElectronLaunch:!artifactsOnly,bundledBrowserLaunches:2,localhostPersistence:true,browserHostDefaults:observed,minimalEnvironmentKeys:Object.keys(options.env).sort(),syntheticData:true,realProviderRequests:0,cleanMachineAcceptance:false,notarized:false};
- writeFileSync(join(root,'docs/packaged-check.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+ writeFileSync(join(root,'docs/packaged-check-'+version+'.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{if(app)await app.close();if(context)await context.close();if(server)await new Promise(resolve=>server.close(resolve));rmSync(qa,{recursive:true,force:true});}

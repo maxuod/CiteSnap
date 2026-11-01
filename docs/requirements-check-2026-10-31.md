@@ -33,3 +33,30 @@ The latest public-repository request was an audit. Existing approved open-source
 Previous goal turn: progress (completed remote public-source/release/secret audit and found real remaining old public content). Current continuation: progress (added and ran a packaged real-browser collection-engine check yielding stronger end-to-end evidence). Mac lock and owner sign-in/signing are now verified external prerequisites. This is not a completion claim or a verified wait on a live external job.
 
 A post-DMG source rerun found that default Vitest discovery followed the installer Applications shortcut into unrelated installed template tests. This was a verification-boundary failure, not a passing source suite. Both pre-fix failures and the corrected run are preserved under the ignored private validation directory. Explicit test discovery now targets only tests/; actual listing and rerun verify9project files,216passed and1existing opt-in skip, zero external files. See docs/test-discovery-boundary.json for hashes. No shipped runtime or UI changed.
+
+## Resumed owner-account acceptance checkpoint
+
+The owner unlocked the Mac and authorized one real round. The earlier lock/sign-in
+block is resolved. The [0.2.2 acceptance record](copilot-native-read-fix-2026-10-31.md)
+supersedes the earlier unverified real-provider status above for one owner's
+Copilot session only. Exactly two distinct questions were submitted once each.
+The first retained an extraction failure and was recovered manually from its
+existing conversation. The second completed automatic collection and native export
+with a 2,745-character body and six URLs; all six addresses returned HTTP 200.
+Final read-only comparison with six native References cards verifies the same body
+and URL-set hashes. No failed question was resent or historical capture rewritten.
+
+Final 0.2.2 source: 223 passed plus one existing skip / nine files. Its signed app
+and read-only mounted local-test image match 642 manifest entries and 24 source
+files. Normal reopening retains exact saved workspace bytes and positively restores
+the dedicated Copilot account without credential entry or new submission. The
+original getaudit installed ASAR still matches its baseline. Older generated apps
+and local-test images were removed after acceptance; evidence and source remain.
+
+Fresh connected GitHub metadata still reports maxuod/getaudit-web visibility
+private. The independent collector remains local with no remote or publication.
+The current release gate still returns developer_id_and_hardened_runtime_required;
+formal signing/notarization and clean supported-machine download acceptance remain.
+Other platform accounts and independent customers are not certified by this run.
+The full ordinary-customer delivery goal is therefore still incomplete. This
+checkpoint is progress, not a completed goal or a wait on an active external job.
