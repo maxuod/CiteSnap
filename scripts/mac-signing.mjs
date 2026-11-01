@@ -17,7 +17,7 @@ export function signingConfig(argv){
   try{execFileSync(c.helper,['unlock',c.keychain,c.passwordFile],{stdio:'pipe',timeout:30000});}catch{throw Error('Local build signing keychain could not be unlocked.');}
   return {...c,kind:'local-certificate',publicDistribution:false};
  }
- const identity=process.env.ANSWERPOUCH_CODESIGN_IDENTITY,keychain=process.env.ANSWERPOUCH_CODESIGN_KEYCHAIN;
+ const identity=process.env.CITESNAP_CODESIGN_IDENTITY||process.env.ANSWERPOUCH_CODESIGN_IDENTITY,keychain=process.env.CITESNAP_CODESIGN_KEYCHAIN||process.env.ANSWERPOUCH_CODESIGN_KEYCHAIN;
  if(!identity||identity==='-'||/[\r\n\0]/.test(identity)||keychain&&!isAbsolute(keychain))throw Error('Configure a signing identity, or pass --local-signing-config for a local candidate.');
  return {identity,keychain,kind:'certificate',publicDistribution:false};
 }
@@ -27,6 +27,6 @@ export async function signApp(app,config){
  execFileSync('/usr/bin/codesign',['--verify','--deep','--strict',app],{stdio:'pipe'});
  const inspected=spawnSync('/usr/bin/codesign',['-dr','-',app],{encoding:'utf8'});
  const requirement=inspected.stdout+inspected.stderr;
- if(inspected.status||!requirement.includes('identifier "com.maxuod.answerpouch"')||!/(certificate (leaf|root|\d+)|anchor (apple|H"))/.test(requirement))throw Error('Certificate-bound AnswerPouch signing requirement was not established.');
+ if(inspected.status||!requirement.includes('identifier "com.maxuod.answerpouch"')||!/(certificate (leaf|root|\d+)|anchor (apple|H"))/.test(requirement))throw Error('Certificate-bound CiteSnap signing requirement was not established.');
  return {kind:config.kind,certificateBound:true,notarized:false,publicDistribution:false};
 }

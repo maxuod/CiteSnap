@@ -11,9 +11,9 @@ const require=createRequire(import.meta.url),{_electron}=require('playwright-cor
 const {createBrowserEnvironment}=require('../lib/browser-environment.cjs');
 const {SPEC}=require('../lib/browser-runtime.cjs');
 const version=JSON.parse(readFileSync(join(root,'package.json'))).version;
-const executablePath=join(root,'out',version,'AnswerPouch-darwin-arm64/AnswerPouch.app/Contents/MacOS/AnswerPouch');
+const executablePath=join(root,'out',version,'CiteSnap-darwin-arm64/CiteSnap.app/Contents/MacOS/CiteSnap');
 const qa=mkdtempSync(join(tmpdir(),'answerpouch-beta-ui-')),data=join(qa,'user-data');
-const images=join(root,'docs/qa/0.2.3');mkdirSync(images,{recursive:true});
+const images=join(root,'docs/qa',version);mkdirSync(images,{recursive:true});
 let app;
 async function open(){app=await _electron.launch({executablePath,args:['--user-data-dir='+data],env:createBrowserEnvironment(),timeout:30000});const page=await app.firstWindow();await page.locator('[data-action="language"]').waitFor();return page;}
 try{
@@ -46,5 +46,5 @@ try{
  assert.equal(state.browserSetup.ready,true);assert.equal(state.available.available,true);assert.equal(await page.locator('[data-action="prepare-browser"]').count(),0);assert.deepEqual(state.runs,[]);assert.deepEqual(state.tasks,[]);
  await app.close();app=null;assert.equal(hash(),before);
  const result={passed:true,packagedNativeUi:true,isolatedData:true,freshDownloadActionVisible:true,englishAndChinese:true,narrowWidth:860,noHorizontalOverflow:true,explicitDownloadFailureHandled:true,automaticRetries:0,existingOfficialRuntimeRecognized:true,workspaceBytesPreserved:true,realProviderRequests:0,cleanMachineAcceptance:false};
- writeFileSync(join(root,'docs/beta-ui-check-0.2.3.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+ writeFileSync(join(root,'docs/beta-ui-check-'+version+'.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await app?.close();rmSync(qa,{recursive:true,force:true});}

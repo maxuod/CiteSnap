@@ -17,6 +17,14 @@ describe('independent evidence interchange',()=>{
   expect(verifyEvidence(JSON.parse(JSON.stringify(e)))).toEqual({valid:true,schemaVersion:1,status:'observed',restriction:'none'});
   expect(e.capture).toEqual(c);expect(e.capture).not.toBe(c);expect(JSON.stringify({task,c})).toBe(before);
   expect(Buffer.from(e.capture.artifact.base64,'base64').toString()).toBe('Synthetic exact artifact');
+  expect(e.collector.name).toBe('CiteSnap');
+ });
+ it('still verifies legacy AnswerPouch evidence without relabeling its saved bytes',()=>{
+  const old=createEvidence(task,capture());old.collector.name='AnswerPouch';
+  const {hash:ignored,...body}=old;
+  const canonical=(value:any):any=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(k=>[k,canonical(value[k])])):value;
+  old.hash=createHash('sha256').update(JSON.stringify(canonical(body))).digest('hex');const bytes=JSON.stringify(old);
+  expect(verifyEvidence(old)).toMatchObject({valid:true});expect(JSON.stringify(old)).toBe(bytes);
  });
  it('detects changes to the original answer, source URL, question and artifact',()=>{
   const original=createEvidence(task,capture());

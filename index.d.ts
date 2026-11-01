@@ -9,7 +9,7 @@ export interface Collector {available():{available:boolean;message:string};colle
 export interface CollectorOptions {profileRoot?:string;accountDiagnostics?:((record:unknown)=>void)&{enabled?:()=>boolean}}
 export function createCollector(options?:CollectorOptions):Collector;
 export const createChromeCollector:typeof createCollector;
-export interface Evidence {kind:'answerpouch.capture';schemaVersion:1;collector:{name:'AnswerPouch';version:string;sourceManifestSha256:string};task:BrowserTask;capture:Capture;hash:string}
+export interface Evidence {kind:'answerpouch.capture';schemaVersion:1;collector:{name:'AnswerPouch'|'CiteSnap';version:string;sourceManifestSha256:string};task:BrowserTask;capture:Capture;hash:string}
 /** Version 1 evidence supports strict signed-out tasks; validation rejects broader modes. */
 export function createEvidence(task:BrowserTask,capture:Capture):Evidence;
 export function verifyEvidence(envelope:unknown):{valid:true;schemaVersion:1;status:Capture['status'];restriction:Capture['restriction']};

@@ -4,15 +4,15 @@ const {readFileSync,lstatSync}=require('node:fs');
 const {verifyEvidence,taskSchema}=require('../index.cjs');
 const {verifyQuestions,verifyLocalEvidence}=require('../lib/local-workspace.cjs');
 function read(file){const s=lstatSync(file);if(!s.isFile()||s.isSymbolicLink()||s.size>16*1024*1024)throw Error('Invalid file');return JSON.parse(readFileSync(file,'utf8'));}
-const help=`AnswerPouch — local AI answer evidence.
+const help=`CiteSnap — local AI answer evidence.
 
-Open the AnswerPouch desktop application to freeze/import questions, sign in
+Open the CiteSnap desktop application to freeze/import questions, sign in
 with your own accounts and collect using this computer's network.
 
 Offline tools (never open a browser or submit questions):
-  answerpouch check-task TASK.json
-  answerpouch verify EVIDENCE.json
-  answerpouch verify-questions FROZEN.json
+  citesnap check-task TASK.json
+  citesnap verify EVIDENCE.json
+  citesnap verify-questions FROZEN.json
 
 The legacy signed-out CLI collect command is disabled in 0.2.
 `;

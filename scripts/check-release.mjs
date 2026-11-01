@@ -3,7 +3,7 @@ import {execFileSync,spawnSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {root} from './prepare-browser.mjs';
-const app=join(root,'out',JSON.parse(readFileSync(join(root,'package.json'),'utf8')).version,'AnswerPouch-darwin-arm64/AnswerPouch.app');
+const app=join(root,'out',JSON.parse(readFileSync(join(root,'package.json'),'utf8')).version,'CiteSnap-darwin-arm64/CiteSnap.app');
 function fail(reason){console.log(JSON.stringify({ready:false,reason}));process.exit(1);}
 try{execFileSync('/usr/bin/codesign',['--verify','--deep','--strict',app],{stdio:'pipe'});}catch{fail('signature_invalid_or_missing');}
 const signature=spawnSync('/usr/bin/codesign',['-dv','--verbose=4',app],{encoding:'utf8'});

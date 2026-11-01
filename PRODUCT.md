@@ -1,31 +1,11 @@
-# AnswerPouch customer experience
+# CiteSnap
 
-AnswerPouch · 答袋 is the provisional name for a standalone local AI answer/citation collector for SEO/GEO researchers, separate from the getaudit hosted website, GSC accounts, analysis and recommendations. Ordinary customers should download/open the application without installing Node.js, running commands, editing config files or obtaining developer keys. Their own platform sign-in is required; a getaudit account is not.
+CiteSnap is free script-based GEO/AEO software for querying AI mentions of companies, websites, products and other targets. Import a frozen question set, use the selected platforms through the user's own accounts, and automatically collect original answers and cited links. Reviewing those answers supports comparison with competing alternatives and decisions about content/GEO/AEO improvements. The collector does not automatically calculate mention rates or competitor rankings, and competitive gains are not guaranteed.
 
-## Confirmed workflow
+The approved orange/white design and mouthless mascot remain. English is the default; Simplified Chinese is available. The current 0.2.4 public-beta target is Apple Silicon macOS 13+. Browser preparation is one explicit pinned official download; no Node.js, terminal or developer key is required by ordinary users. Developer ID signing and notarization remain deferred. Another clean Mac's installation and broader provider/account acceptance remain separate checks.
 
-1. Freeze exact local questions to a file, one question per line, with their wording, order and integrity hash.
-2. Import that file. Integrity is checked and a local copy saved. Import does not send questions.
-3. Select sources, sign into the user's own accounts in dedicated windows, review account/request and local-network notices, then Start. Collect automatically and sequentially; inspect/export original answers, links and stopped tasks.
+Preserve exact frozen questions, captured answers/citations, task states and evidence hashes. Dedicated profiles stay isolated from personal Chrome/getaudit. Current accounts and the fresh conversation are checked before submission. The 45-second cadence, 50-start/source/rolling-24-hour local guard and repeat acknowledgement are not platform-safe quotas. Access restrictions stop the batch and uncertain submissions never replay automatically.
 
-Adapters: ChatGPT Search, Gemini, Copilot, Perplexity, Grok and Google AI Overview. Availability is not proof of account access, complete answers or full citations. The shipped app starts empty; synthetic fixtures are test-only.
+Use the computer's current network/browser defaults, without country/proxy/IP/timezone/geolocation controls. OS VPN/proxy settings may affect the exit; physical location and network country remain unverified. Startup/read/import/language changes never initiate browser downloads or provider queries.
 
-## Account, frequency and location
-
-Dedicated profiles remain separate from personal Chrome and getaudit. Saved login is not current account proof. No automatic startup login window/collection, paid/API fallback, retry or interrupted-submission replay. CAPTCHA, login expiry, rate limits or region restrictions stop the batch and retain evidence.
-
-Frequent/large automated requests may cause verification, rate limits, temporary restrictions or account suspension. Larger/repeated batches show a stronger warning, and repeats require an extra acknowledgement. Initial local guard: 50 starts/source in a rolling 24 hours, one at a time, with a 45-second gap. These are local guardrails, not platform-approved safe quotas or an account-safety guarantee.
-
-Use the host's actual network and browser defaults. No app controls or start-input overrides for country, proxy, IP, timezone or geolocation. UI language only translates local controls. System VPN/proxy settings can affect the exit; the app does not adjust them. Network country and physical location remain unverified; results/access may be region-limited.
-
-## Implemented local candidate and remaining release work
-
-Version 0.2.0 implements this flow in Electron with its own pinned Chrome for Testing runtime. Initial target: Apple Silicon macOS 13 or newer. Default English plus Chinese. Preserve the orange/white world and mouthless mascot; docs/desktop-surface.md records the direction.
-
-Source tests and native synthetic acceptance are recorded in docs/. Local certificate signing and bundled-browser smoke have separate receipts. Local signing is not Developer ID, Apple notarization, clean-machine acceptance or a public customer download. Real sign-in/capture per platform and clean-Mac installation remain to be accepted. Do not claim Windows or Intel support.
-
-The free/open-source research-core direction is unchanged; extraction does not enact a new license or public release. Browser extensions and hosted model APIs remain alternatives with different permissions/evidence conditions; neither has been implemented as an equivalent replacement here.
-
-## Public beta delivery update · 2026-10-31
-
-The owner authorized an explicitly unnotarized public beta. Current application version is 0.2.3; prior local-candidate claims above are historical. The installer omits Chrome for Testing and its restricted components. One explicit Prepare browser action downloads the pinned official archive to the app data directory, verifies its size/SHA-256, and keeps vendor bytes/OS trust unchanged. No terminal, separate browser installation or developer key is needed. See docs/INSTALL.md and docs/beta-release-0.2.3.md. Public availability does not prove another clean Mac can open it or that all providers work.
+The visible name is CiteSnap. Preserve the legacy AnswerPouch user/session data directory, bundle ID, internal origin/IPC/localStorage keys and evidence kinds; do not copy or rewrite existing evidence/profiles for branding. The original getaudit consumer remains pinned to 0.1.0. See ABOUT.md, README.md, docs/INSTALL.md and docs/VALIDATION.md for the user-facing scope.

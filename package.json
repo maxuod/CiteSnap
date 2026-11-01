@@ -1,12 +1,13 @@
 {
-  "name": "@maxuod/answerpouch",
-  "version": "0.2.3",
+  "name": "@maxuod/citesnap",
+  "version": "0.2.4",
   "private": true,
-  "description": "Local AI answer and citation collection, with portable source evidence.",
+  "description": "Free GEO/AEO software to check AI mentions of companies, websites and products.",
   "type": "commonjs",
   "main": "index.cjs",
   "types": "index.d.ts",
   "bin": {
+    "citesnap": "bin/citesnap.cjs",
     "answerpouch": "bin/answerpouch.cjs"
   },
   "exports": {
@@ -41,7 +42,7 @@
   },
   "scripts": {
     "test": "vitest run",
-    "check": "node --check index.cjs && node --check bin/answerpouch.cjs",
+    "check": "node --check index.cjs && node --check bin/citesnap.cjs && node --check desktop/main.cjs",
     "start": "node bin/answerpouch.cjs",
     "desktop": "electron desktop/main.cjs",
     "prepare-browser": "node scripts/prepare-browser.mjs",
@@ -69,10 +70,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxuod/answerpouch.git"
+    "url": "git+https://github.com/maxuod/CiteSnap.git"
   },
-  "homepage": "https://github.com/maxuod/answerpouch#readme",
+  "homepage": "https://github.com/maxuod/CiteSnap#readme",
   "bugs": {
-    "url": "https://github.com/maxuod/answerpouch/issues"
-  }
+    "url": "https://github.com/maxuod/CiteSnap/issues"
+  },
+  "productName": "CiteSnap"
 }

@@ -10,7 +10,7 @@ import {extractAll} from '@electron/asar';
 import {root,browserInfo} from './prepare-browser.mjs';
 
 const require=createRequire(import.meta.url),{chromium}=require('playwright-core');
-const candidate=join(root,'out',JSON.parse(readFileSync(join(root,'package.json'),'utf8')).version,'AnswerPouch-darwin-arm64/AnswerPouch.app');
+const candidate=join(root,'out',JSON.parse(readFileSync(join(root,'package.json'),'utf8')).version,'CiteSnap-darwin-arm64/CiteSnap.app');
 const executablePath=browserInfo().executable;
 const qa=mkdtempSync(join(tmpdir(),'answerpouch-engine-qa-')),appSource=join(qa,'packaged-source');
 extractAll(join(candidate,'Contents/Resources/app.asar'),appSource);
@@ -109,5 +109,5 @@ try{
  assert.ok(launches.every(x=>x.executableMatches&&JSON.stringify(x.env)===JSON.stringify(['HOME','LANG','PATH','TMPDIR'])));
  assert.ok(intervals.every(ms=>ms===45000));
  const receipt={passed:true,packagedCollector:true,bundledBrowser:false,developerBrowser:true,sources:['gemini','perplexity'],syntheticPagesOnly:true,realProviderRequests:0,submissions:5,successfulCaptures:4,restrictionCaptures:1,heldAfterRestriction:1,freshQuestionContexts:4,syntheticSigninActions:profileSigninClicks,persistentSyntheticSessionRestored:true,exactQuestionOrder:true,originalAnswersAndCitationsRetained:true,overrideInputsRejected:true,hostBrowserOptions:true,launches:launches.length,blockedNonFixtureRequests:blockedRequests.length,cadenceValues:intervals,productionCadenceWaitSkippedForTest:true,visibleLoginRequestsRanHeadlessForLockedMacTest:true,realAccountAcceptance:false};
- writeFileSync(join(root,'docs/collection-engine-check-0.2.3.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
+ writeFileSync(join(root,'docs/collection-engine-check-'+JSON.parse(readFileSync(join(root,'package.json'))).version+'.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
 }finally{clearTimeout(timeout);await workspace?.close();rmSync(qa,{recursive:true,force:true});}

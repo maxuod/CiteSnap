@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.4 beta 1 — CiteSnap
+
+- Renamed the public repository, visible application, current package, CLI entry, new capture labels and download to CiteSnap. Published the reviewed English/Chinese description of free GEO/AEO queries for company, website and product mentions, collected answers/citations and competitor review.
+- Preserved the AnswerPouch data/session path, bundle ID, internal browser origin and evidence kinds. Old frozen files, saved records and dedicated profiles remain compatible; historical evidence is not rewritten. New captures identify CiteSnap and old AnswerPouch evidence still verifies.
+- Retained the existing browser preparation, account/access checks, local network defaults and no-replay behavior. No new real-provider collection was requested for this release.
+- Developer ID/notarization, another clean Mac's installation and broader real-account platform validation remain uncompleted. The release is an explicitly unnotarized beta.
+
 ## 0.2.3 beta 1 — first public AnswerPouch beta
 
 - Apple Silicon macOS 13+ download; ordinary users need no Node.js, terminal or developer key.

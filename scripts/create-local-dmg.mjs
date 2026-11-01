@@ -1,15 +1,2 @@
-import {existsSync,symlinkSync,writeFileSync,readFileSync,statSync} from 'node:fs';
-import {join} from 'node:path';
-import {execFileSync} from 'node:child_process';
-import {createHash} from 'node:crypto';
-import {root} from './prepare-browser.mjs';
-const source=join(root,'out/AnswerPouch-darwin-arm64'),app=join(source,'AnswerPouch.app');
-const version=JSON.parse(readFileSync(join(root,'package.json'))).version;
-const image=join(root,'out',`AnswerPouch-${version}-mac-arm64-local-test.dmg`);
-if(existsSync(image))throw Error('A local test image already exists. Validate it before replacing it.');
-execFileSync('/usr/bin/codesign',['--verify','--deep','--strict',app],{stdio:'pipe'});
-if(!existsSync(join(source,'Applications')))symlinkSync('/Applications',join(source,'Applications'));
-writeFileSync(join(source,'Read First.txt'),`AnswerPouch ${version} · Local test candidate / 本地测试版\n\nApple Silicon, macOS 13+. Includes its own browser; no Node.js or terminal setup.\nFreeze questions -> import -> choose sources/sign into your own accounts -> review risks -> collect/export.\n\nThis is locally certificate-signed, not Developer ID notarized. It is not an accepted public customer download. Do not disable system security to open it. Official signing/notarization and clean-machine acceptance remain. Real platform sign-in/capture is not certified by synthetic testing.\n\n本地测试证书并不等于 Apple 正式分发签名或公证。本包尚未通过其他 Mac 的下载安装验收，不要关闭系统安全保护。独立平台的真实登录及采集仍需验收。\n\nUse your own accounts. Frequent automated requests may cause verification, limits or suspension. No safe request count is guaranteed.\nCollection uses this computer's network; no location/proxy switch. Network country/physical location remain unverified.\n\n使用自己的账号；请求过多可能触发验证、限流或封号。仅使用本机当前网络，不提供地区/代理切换。\n`);
-execFileSync('/usr/bin/hdiutil',['create','-volname','AnswerPouch Local Test','-srcfolder',source,'-format','UDZO',image],{stdio:'inherit',timeout:120000});
-const receipt={filename:image.split('/').at(-1),version,bytes:statSync(image).size,sha256:createHash('sha256').update(readFileSync(image)).digest('hex'),localTestOnly:true,notarized:false,publicDistribution:false};
-writeFileSync(join(root,'out','local-image.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
+// Legacy entry retained; current packaging uses the explicit public-beta builder.
+import './create-beta-dmg.mjs';

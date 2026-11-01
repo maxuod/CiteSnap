@@ -1,19 +1,33 @@
-# Privacy / 隐私说明
+# Privacy
 
-AnswerPouch keeps questions, task checkpoints, captures, UI preferences and dedicated browser login profiles locally. No getaudit account, cloud evidence uploader, analytics SDK or automatic collection schedule is included.
+CiteSnap's collection workflow keeps questions, task records, captured answers and dedicated platform profiles on your computer. It has no cloud evidence uploader, analytics SDK or automatic collection schedule.
 
-macOS data normally lives under `~/Library/Application Support/AnswerPouch/`: `workspace/` holds questions/evidence; `profiles/chrome-for-testing/` holds sensitive dedicated login stores; `runtime/` holds the explicitly downloaded browser and version/hash receipt. Native save/export dialogs write additional files where you choose.
+CiteSnap 0.2.4 preserves `~/Library/Application Support/AnswerPouch/` on macOS. The display-name change leaves this path in place:
 
-| Action | External contact |
-| --- | --- |
-| App startup, freeze/import, language change, saved evidence/export | No question submission or AnswerPouch cloud upload |
-| Explicit Prepare browser | Pinned archive from storage.googleapis.com; Google receives normal download metadata including network IP. No questions or login secrets are attached by AnswerPouch |
-| Open/restore account | The platform and its sign-in services receive normal browser traffic |
-| Explicit Start collecting | Exact frozen questions go through selected platform websites under your accounts |
-| Click a citation | Saved URL opens in your system browser |
+- `workspace/` contains frozen questions, task checkpoints and evidence.
+- `profiles/chrome-for-testing/` contains the dedicated login stores, which may hold sensitive cookies and sessions.
+- `runtime/` contains the explicitly downloaded browser and its version/hash receipt.
 
-Third-party browser, platform and OS services may make their own requests and keep their own history/diagnostics under their terms. Local storage does not mean offline AI or anonymous use. Exports can contain private customer answers and URLs; they do not intentionally export cookies or login stores.
+Native save dialogs also write files to the locations you choose.
 
-Removing the app from Applications does not erase local data. To remove everything, export evidence you need, normally quit, then inspect **only** the AnswerPouch data directory with Finder → Go → Go to Folder before deleting it. This permanently removes unexported evidence and local login sessions. Do not remove other products' folders.
+## Network activity
 
-中文：问题、证据、独立账号资料和下载的浏览器分别存在本机 AnswerPouch 目录。准备浏览器连接 Google，登录连接所选平台，开始采集才提交冻结问题；引用通过系统浏览器打开。第三方服务有各自网络与隐私行为，本地不等于离线或匿名。卸载应用不会自动删除数据；如需清除，先导出资料、退出，再仅处理本应用的数据目录。不要公开 Cookie、账号资料、密钥或客户原始导出。
+Opening the app, freezing or importing questions, changing the language and reading or exporting saved evidence do not submit questions. Prepare browser contacts Google's official download service, which receives normal request metadata such as your network IP. The app attaches no research questions or login secrets to that download.
+
+Opening an account window contacts the selected platform and its sign-in services. Start collecting sends the exact frozen questions through the selected platform's website under your account. Clicking a saved citation opens its address in your system browser.
+
+Browsers, platforms and the operating system may make their own requests or retain history and diagnostics under their terms. Local evidence storage does not mean offline AI or anonymous platform use.
+
+## Sharing and removal
+
+An evidence export can contain personal or customer information, answer text and URLs. It is not intended to include browser cookies or login stores. Check the file and the relevant authorization before sharing it. Keep profiles and account credentials private.
+
+Removing the app from Applications leaves its data behind. If you want to remove the data too, export what you need, quit normally and use Finder → Go → Go to Folder to inspect the application data path above. Deleting that directory removes unexported evidence and local sessions. Limit the removal to this app's directory.
+
+## 中文
+
+问题、任务记录、回答和独立平台登录资料保存在本机。程序没有证据上传、统计 SDK 或自动采集计划。CiteSnap 0.2.4 继续使用 `~/Library/Application Support/AnswerPouch/`，应用改名不改变这个路径。
+
+打开应用、冻结或导入、切换语言、查看及导出已有证据不会提交问题。“准备采集浏览器”连接 Google 官方下载服务；打开账号窗口会访问对应平台，点击“开始采集”才通过所选平台发送冻结问题。引用链接通过系统浏览器打开。浏览器、平台和系统有各自的网络及数据留存规则，本地保存不等于离线或匿名使用。
+
+导出可能包含个人或客户信息、回答和网址，分享前请检查内容与授权。不要分享登录目录、Cookie 或密钥。卸载应用不会自动删数据；若需全部清除，先导出需要的资料、正常退出，再通过 Finder 检查并仅删除本应用的数据目录。未单独导出的证据和本地登录也会一并移除。

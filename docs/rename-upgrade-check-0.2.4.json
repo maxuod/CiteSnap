@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "legacyVersion": "0.2.3",
+  "currentVersion": "0.2.4",
+  "nativeDisplayName": "CiteSnap",
+  "sameDataAndSessionPath": true,
+  "languagePreserved": true,
+  "frozenQuestionHashPreserved": true,
+  "workspaceAndEvidenceBytesPreserved": true,
+  "legacyExportDeepEqual": true,
+  "newExportFilename": true,
+  "syntheticProfileMarkerPreserved": true,
+  "realLoginRestorationTested": false,
+  "noReplay": true,
+  "realProviderRequests": 0,
+  "syntheticOnly": true
+}

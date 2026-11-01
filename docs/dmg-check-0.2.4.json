@@ -1,0 +1,15 @@
+{
+  "version": "0.2.4",
+  "product": "CiteSnap",
+  "imageVerify": true,
+  "readOnlyMount": true,
+  "manifestEntriesMatch": 280,
+  "strictSignatureVerified": true,
+  "applicationsShortcutVerified": true,
+  "installGuideEnglishAndChinese": true,
+  "upgradeQuitInstructions": true,
+  "browserBundled": false,
+  "notarized": false,
+  "cleanMachineAcceptance": false,
+  "sha256": "23af6ba0263da0edeb2e9888eaac3dac9db5620e6a07fe679088313516f1a922"
+}

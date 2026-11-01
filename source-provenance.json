@@ -74,5 +74,20 @@
         "sha256": "04703f79dde04d1cdbf6512cd9e8daee9eb97ba1d2bfc72f092d6528f585b580"
       }
     ]
+  },
+  "brandingRevision": {
+    "version": "0.2.4",
+    "productName": "CiteSnap",
+    "previousName": "AnswerPouch",
+    "sevenRuntimeModulesUnchangedFrom": "0.2.2",
+    "preservedIdentifiers": [
+      "com.maxuod.answerpouch",
+      "answerpouch://desktop",
+      "AnswerPouch data directory",
+      "answerpouch.questions",
+      "answerpouch.local-capture",
+      "answerpouch.run",
+      "answerpouch.capture"
+    ]
   }
 }

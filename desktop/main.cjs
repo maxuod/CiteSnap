@@ -4,14 +4,16 @@ const path=require('node:path');
 const {createChromeCollector}=require('../lib/chrome-collector.cjs');
 const {LocalWorkspace,freezeQuestions,readJson}=require('../lib/local-workspace.cjs');
 const {BrowserRuntime}=require('../lib/browser-runtime.cjs');
+const {configureIdentity}=require('./identity.cjs');
 protocol.registerSchemesAsPrivileged([{scheme:'answerpouch',privileges:{standard:true,secure:true,supportFetchAPI:true}}]);
-app.setName('AnswerPouch');
 // Test data stays in a fresh, explicitly selected developer-only workspace.
-if(!app.isPackaged&&process.env.ANSWERPOUCH_QA_DATA_DIR){
- const qa=process.env.ANSWERPOUCH_QA_DATA_DIR,stat=fs.lstatSync(qa);
- if(!path.isAbsolute(qa)||!path.basename(qa).startsWith('answerpouch-qa-')||!stat.isDirectory()||stat.isSymbolicLink()||stat.uid!==process.getuid())throw Error('Invalid QA directory.');
- app.setPath('userData',qa);
+let qaDataPath;
+if(!app.isPackaged&&(process.env.CITESNAP_QA_DATA_DIR||process.env.ANSWERPOUCH_QA_DATA_DIR)){
+ const qa=process.env.CITESNAP_QA_DATA_DIR||process.env.ANSWERPOUCH_QA_DATA_DIR,stat=fs.lstatSync(qa);
+ if(!path.isAbsolute(qa)||!['citesnap-qa-','answerpouch-qa-'].some(prefix=>path.basename(qa).startsWith(prefix))||!stat.isDirectory()||stat.isSymbolicLink()||stat.uid!==process.getuid())throw Error('Invalid QA directory.');
+ qaDataPath=qa;
 }
+configureIdentity(app,{qaDataPath});
 let window,workspace,runtime,lastFrozenFile,quitting=false;
 const origin='answerpouch://desktop';
 const files={'/':'index.html','/index.html':'index.html','/app.js':'app.js','/style.css':'style.css','/assets/getaudit-app.png':'assets/getaudit-app.png','/assets/bricolage-800.ttf':'assets/bricolage-800.ttf'};
@@ -54,9 +56,9 @@ async function setup(){
  bind('preview',sources=>workspace.preview(Array.isArray(sources)?sources:[]));
  bind('start',request=>{browserReady();return workspace.start(request);});bind('stop',()=>workspace.stop());
  bind('evidence',id=>workspace.evidence(safeId(id)));
- bind('export',async id=>{const report=workspace.exportRun(safeId(id));const result=await dialog.showSaveDialog(window,{title:'Export evidence / 导出证据',defaultPath:'AnswerPouch-'+report.run.createdAt.slice(0,10)+'-'+id.slice(0,8)+'.json',filters:[{name:'Evidence JSON',extensions:['json']}]});if(result.canceled)return null;privateWrite(result.filePath,report);return {filename:path.basename(result.filePath)};});
+ bind('export',async id=>{const report=workspace.exportRun(safeId(id));const result=await dialog.showSaveDialog(window,{title:'Export evidence / 导出证据',defaultPath:'CiteSnap-'+report.run.createdAt.slice(0,10)+'-'+id.slice(0,8)+'.json',filters:[{name:'Evidence JSON',extensions:['json']}]});if(result.canceled)return null;privateWrite(result.filePath,report);return {filename:path.basename(result.filePath)};});
  bind('open-source',async input=>{const evidence=workspace.evidence(safeId(input?.taskId));if(typeof input.url!=='string'||!evidence.capture.citations.some(c=>c.url===input.url)||!/^https?:\/\//.test(input.url))throw Error('invalid_source');await shell.openExternal(input.url);return true;});
- window=new BrowserWindow({width:1180,height:880,minWidth:860,minHeight:650,backgroundColor:'#fffaf6',title:'AnswerPouch',webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true}});
+ window=new BrowserWindow({width:1180,height:880,minWidth:860,minHeight:650,backgroundColor:'#fffaf6',title:'CiteSnap',webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true}});
  window.webContents.session.setPermissionRequestHandler((_wc,_permission,callback)=>callback(false));
  window.webContents.setWindowOpenHandler(()=>({action:'deny'}));window.webContents.on('will-navigate',event=>event.preventDefault());
  window.on('focus',()=>{void workspace.verifyOnFocus();});
@@ -64,7 +66,7 @@ async function setup(){
  await window.loadURL(origin+'/');
 }
 if(!app.requestSingleInstanceLock())app.quit();else{
- app.whenReady().then(setup).catch(()=>{if(quitting)return;dialog.showErrorBox('AnswerPouch','The local workspace could not open. Your saved files have not been deleted. / 无法打开本地工作区，已有文件未删除。');app.quit();});
+ app.whenReady().then(setup).catch(()=>{if(quitting)return;dialog.showErrorBox('CiteSnap','The local workspace could not open. Your saved files have not been deleted. / 无法打开本地工作区，已有文件未删除。');app.quit();});
  app.on('second-instance',()=>{window?.show();window?.focus();});
  app.on('before-quit',event=>{if(quitting||!workspace)return;event.preventDefault();quitting=true;void Promise.allSettled([runtime.close(),workspace.close()]).finally(()=>app.quit());});
  app.on('window-all-closed',()=>app.quit());
