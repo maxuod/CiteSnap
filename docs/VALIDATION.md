@@ -2,6 +2,12 @@
 
 The observations below retain their original version scope. Tests using synthetic data are distinguished from real-platform observations.
 
+## 0.2.6 beta checks
+
+The source suite passed 239 tests, with one existing opt-in skip. The packaged application and source assets matched; isolated native checks covered the new icon, both interface languages, browser preparation failure and reuse, and preservation of a synthetic workspace. The installer was mounted read-only to verify the icon, guide, shortcut and local signature. No real AI-platform question was submitted. Apple Developer ID signing, notarization and installation on another clean Mac remain unverified.
+
+0.2.6 测试版通过 239 项测试，另有一项原有可选跳过。隔离环境核对了新图标、中英文界面、浏览器准备及合成工作区的保留；安装包以只读方式检查。没有新发真实平台问题，Apple 正式签名、公证和另一台干净 Mac 的安装仍待验证。
+
 ## Real Copilot observations
 
 Two distinct questions were submitted once each through one user's own Copilot account on 2026-10-31. The sequence matters:

@@ -16,7 +16,7 @@ if(!app.isPackaged&&(process.env.CITESNAP_QA_DATA_DIR||process.env.ANSWERPOUCH_Q
 configureIdentity(app,{qaDataPath});
 let window,workspace,runtime,lastFrozenFile,quitting=false;
 const origin='answerpouch://desktop';
-const files={'/':'index.html','/index.html':'index.html','/app.js':'app.js','/style.css':'style.css','/assets/getaudit-app.png':'assets/getaudit-app.png','/assets/bricolage-800.ttf':'assets/bricolage-800.ttf'};
+const files={'/':'index.html','/index.html':'index.html','/app.js':'app.js','/style.css':'style.css','/assets/citesnap-flat.png':'assets/citesnap-flat.png','/assets/bricolage-800.ttf':'assets/bricolage-800.ttf'};
 const csp="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'";
 function browserPath(){
  if(app.isPackaged)return runtime.executable;

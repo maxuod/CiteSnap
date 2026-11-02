@@ -1,16 +1,22 @@
 # CiteSnap
 
+![CiteSnap：抱着引用卡片的橙色小幽灵](docs/images/citesnap-hero-flat.svg)
+
 免费查询 AI 对公司、网站、产品等对象的提及情况。
 
 CiteSnap 是一款面向 GEO/AEO 优化的脚本软件。导入冻结的问题集，登录自己的账号并勾选 AI 平台后，程序会自动提问，收集回答原文及其中引用的链接。
 
 用同一组问题对照目标与竞品，查看提及情况和引用来源。你可以据此发现内容与提及上的差距，调整 GEO/AEO 优化方向，争取在 AI 回答中获得比竞品更多的提及。
 
-[下载 Mac 测试版](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1) · [安装与首次登录](docs/INSTALL.md#中文安装与首次登录) · [English](README.md)
+[下载 Mac 测试版](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.6-beta.1) · [安装与首次登录](docs/INSTALL.md#中文安装与首次登录) · [English](README.md)
 
 ## 先试一次采集
 
-当前下载为 **CiteSnap 0.2.5 测试版**。问题、证据和独立登录资料保存在你的电脑上。
+![CiteSnap 0.2.6 测试版的问题准备界面](docs/images/app-home-zh.png)
+
+*0.2.6 测试版的实际界面，截图使用空白本地工作区。*
+
+当前下载为 **CiteSnap 0.2.6 测试版**。问题、证据和独立登录资料保存在你的电脑上。
 
 测试版适用于 M1 及更新芯片的 Mac，系统需 macOS 13 或以上。Intel Mac、Windows 和 Linux 暂无安装包。下载 DMG 后，将应用拖入 Applications（应用程序）。
 

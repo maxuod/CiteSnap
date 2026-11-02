@@ -22,7 +22,7 @@ try{
  for(const dependency of Object.keys(pkg.dependencies))copyPortableTree(join(root,'node_modules',dependency),join(appSource,'node_modules',dependency));
  writeFileSync(join(appSource,'package.json'),JSON.stringify({name:'citesnap',productName:'CiteSnap',version:pkg.version,private:true,main:'desktop/main.cjs',dependencies:pkg.dependencies},null,2)+'\n');
  const electronVersion=pkg.devDependencies.electron;
- const apps=await packager({dir:appSource,out,name:'CiteSnap',appBundleId:'com.maxuod.answerpouch',appVersion:pkg.version,buildVersion:pkg.version,platform:'darwin',arch:'arm64',electronVersion,icon:join(root,'desktop/assets/answerpouch.icns'),asar:true,prune:false,overwrite:false,extendInfo:{NSHumanReadableCopyright:'CiteSnap · MAXUOD',NSAppTransportSecurity:{NSAllowsArbitraryLoads:false}}});
+ const apps=await packager({dir:appSource,out,name:'CiteSnap',appBundleId:'com.maxuod.answerpouch',appVersion:pkg.version,buildVersion:pkg.version,platform:'darwin',arch:'arm64',electronVersion,icon:join(root,'desktop/assets/citesnap-flat.icns'),asar:true,prune:false,overwrite:false,extendInfo:{NSHumanReadableCopyright:'CiteSnap · MAXUOD',NSAppTransportSecurity:{NSAllowsArbitraryLoads:false}}});
  const app=join(apps[0],'CiteSnap.app');
  assertPortableTree(app);const signed=await signApp(app,signing);
  const manifest=[];

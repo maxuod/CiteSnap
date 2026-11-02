@@ -1,20 +1,22 @@
 # CiteSnap
 
+![CiteSnap — an orange ghost holding a citation card](docs/images/citesnap-hero-flat.svg)
+
 Check how AI mentions a company, website or product.
 
 CiteSnap is free script-based software for GEO/AEO optimization. Import a frozen question set, sign into your own accounts and choose AI platforms. It automatically submits the questions and collects the answers with their cited links.
 
 Use the same questions to examine mentions of a target company, website or product alongside competing alternatives. Reviewing what gets mentioned and which pages are cited can reveal gaps to address in your content and GEO/AEO work, with the aim of gaining more mentions than competitors.
 
-[Download the Mac beta](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.5-beta.1) · [Install and sign in](docs/INSTALL.md) · [简体中文](#中文)
+[Download the Mac beta](https://github.com/maxuod/CiteSnap/releases/tag/v0.2.6-beta.1) · [Install and sign in](docs/INSTALL.md) · [简体中文](#中文)
 
 ## Try the beta
 
-The current build is **CiteSnap 0.2.5 beta**. Questions, evidence and dedicated login profiles are stored on your computer.
+The current build is **CiteSnap 0.2.6 beta**. Questions, evidence and dedicated login profiles are stored on your computer.
 
 | Build | Requirements | Status |
 | --- | --- | --- |
-| [0.2.5 beta 1 — DMG](https://github.com/maxuod/CiteSnap/releases/download/v0.2.5-beta.1/CiteSnap-0.2.5-mac-arm64-beta.dmg) | Apple Silicon (M1+), macOS 13+ | Public beta; no Apple Developer ID/notarization |
+| [0.2.6 beta 1 — DMG](https://github.com/maxuod/CiteSnap/releases/download/v0.2.6-beta.1/CiteSnap-0.2.6-mac-arm64-beta.dmg) | Apple Silicon (M1+), macOS 13+ | Public beta; no Apple Developer ID/notarization |
 | Intel Mac / Windows / Linux | — | No supported installer in this release |
 
 It runs on Apple Silicon Macs (M1 or newer) with macOS 13+. Intel Mac, Windows and Linux installers are not available. Download the DMG from the release page and drag the app into Applications.
@@ -24,6 +26,10 @@ This beta has a local build signature and has not received Apple Developer ID si
 On first use, click Prepare browser to download the collection browser directly from Google, about 183 MB. The app checks a pinned SHA-256 before installing it locally. You can use the desktop download without Node.js, terminal commands, an API key or a getaudit account.
 
 ## Collect a first answer
+
+![CiteSnap 0.2.6 beta question preparation screen](docs/images/app-home-en.png)
+
+*The 0.2.6 beta interface, shown with an empty local workspace.*
 
 1. Enter your questions, one per line, and choose Freeze & save. The saved file records their wording and order with an integrity hash.
 2. Import that file. You can keep it for a later observation using the same questions.
