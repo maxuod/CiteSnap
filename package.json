@@ -61,7 +61,7 @@
   "devDependencies": {
     "@electron/osx-sign": "2.7.2",
     "@electron/packager": "20.3.0",
-    "@types/node": "22.15.0",
+    "@types/node": "26.6.6",
     "electron": "45.2.1",
     "linkedom": "0.18.13",
     "typescript": "5.9.3",
