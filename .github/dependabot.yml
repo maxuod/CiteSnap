@@ -5,6 +5,11 @@ updates:
     schedule:
       interval: monthly
     open-pull-requests-limit: 3
+    # Vitest 5 needs an explicit Vite dependency with our legacy-peer-deps setup.
+    # Keep Beta on Vitest 4 until a separately tested major-version migration.
+    ignore:
+      - dependency-name: vitest
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
